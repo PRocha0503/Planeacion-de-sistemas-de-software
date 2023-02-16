@@ -5,7 +5,7 @@ Tags: activity, document
 
 # Nombre e imagen de la oficina
 
-![Untitled](Definicio%CC%81n%20del%20nombre,%20la%20misio%CC%81n,%20visio%CC%81n%20y%20valo%20635c27e61f0740f8bf9dc3c5a46b02c0/Untitled.png)
+![Logo](img/logo.png)
 
 # Valores
 
@@ -24,4 +24,4 @@ Elevar el estándar de planeación y desarrollo en México generando proyectos d
 
 # Misión
 
-Planear y desarrollar proyectos de calidad mundial apegándose a  las mejores prácticas y estándares comerciales internacionales, siguiendo los requerimientos dados por el cliente para dar el mejor resultado posible y construir juntos productos y servicios de alta calidad.
+Planear y desarrollar proyectos de calidad mundial apegándose a las mejores prácticas y estándares comerciales internacionales, siguiendo los requerimientos dados por el cliente para dar el mejor resultado posible y construir juntos productos y servicios de alta calidad.
