@@ -3,4 +3,4 @@
 Created: February 23, 2023 8:45 PM
 Tags: folder
 
-[Carpeta](https://drive.google.com/drive/folders/1x59Dqi-Awr9FgaJ2qSwlSRv3xcWFlwkM?usp=sharing)
+[](https://drive.google.com/drive/folders/1x59Dqi-Awr9FgaJ2qSwlSRv3xcWFlwkM?usp=sharing)
