@@ -5,7 +5,7 @@ Tags: activity, document
 
 # Nombre e imagen de la oficina
 
-![Untitled](Definicio%CC%81n%20del%20nombre,%20la%20misio%CC%81n,%20visio%CC%81n%20y%20valo/Untitled.png)
+![Untitled](Definicion/Untitled.png)
 
 # Valores
 
