@@ -15,3 +15,7 @@ Tags: note
     **¿Cancelación de Pedido en etapa avanzada?**
     
     Pausa de compra con descripción (Contactar con agente para alguna modificación)
+    
+- 1 de Marzo
+    
+    ¿Qué se debería de hacer con reembolsos de pagos?

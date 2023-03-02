@@ -28,7 +28,7 @@ Revenue for the dealership |
 | ID. Functional REQ | Concept | Description/ Criteria of acceptance |
 | --- | --- | --- |
 | REQ_FUN_[008] | Online Payments | The clients are able to make their payments online to the agency. |
-| REQ_FUN_[009] | Commission Management | The Super Admin  |
+| REQ_FUN_[009] | Commission Management | The Super Admin will determine comission fees for salesman |
 
 ## Data visualization
 

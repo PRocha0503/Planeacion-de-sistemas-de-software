@@ -1,11 +1,11 @@
-# Definición del nombre, la misión, visión y valores de la Oficina de Planeación de Proyectos
+# Oficina de Planeación de Proyectos
 
 Created: February 13, 2023 7:42 PM
 Tags: activity, document
 
 # Nombre e imagen de la oficina
 
-![Untitled](Definicion/Untitled.png)
+![Untitled](Oficina/Untitled.png)
 
 # Valores
 
