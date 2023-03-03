@@ -1,11 +1,11 @@
-# Oficina de Planeación de Proyectos
+# Office
 
 Created: February 13, 2023 7:42 PM
 Tags: activity, document
 
 # Nombre e imagen de la oficina
 
-![Untitled](Oficina/Untitled.png)
+![Untitled](Office/Untitled.png)
 
 # Valores
 

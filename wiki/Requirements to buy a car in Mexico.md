@@ -1,4 +1,4 @@
-# Requerimientos para comprar un auto en México
+# Requirements to buy a car in Mexico
 
 Created: February 14, 2023 10:39 AM
 Tags: note
