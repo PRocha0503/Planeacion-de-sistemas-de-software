@@ -1,4 +1,4 @@
-# Historias de Usuario
+# User Stories
 
 Created: February 20, 2023 5:46 PM
 Tags: document

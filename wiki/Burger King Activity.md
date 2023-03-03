@@ -1,4 +1,4 @@
-# Actividad Burger King
+# Burger King Activity
 
 Created: February 17, 2023 5:37 PM
 Tags: activity
@@ -39,7 +39,7 @@ Tags: activity
 
 ## Gantt diagram
 
-[Tasks](Actividad%20Burger%20King/Tasks.csv)
+[Tasks](Burger%20King%20Activity/Tasks.csv)
 
 # Resumen de la lectura
 

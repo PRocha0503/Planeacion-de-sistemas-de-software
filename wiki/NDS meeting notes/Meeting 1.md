@@ -1,37 +1,37 @@
-# Junta 1
+# Meeting 1
 
 ## Go’s
 
-- [x]  Compra de autos en cualquier estado
-- [x]  Validación de identidad del usuario
-- [x]  Buscar autos por reconocimiento de lenguaje natural
-    - Proceso guiado de filtrado
-- [x]  Las agencias deben poder configurar los documentos necesarios para el proceso de compra de un auto
-- [x]  Ofrecer auto como enganche
-    - Subir fotos
-- [x]  Servicio para comunicarte en tiempo real con el vendedor
-- [x]  Cada grupo automotriz deben poder configurar sus planes de financiamiento
-    - Planes de arrendamiento
-- [x]  Deben poder subir sus seguros
-- [x]  Integración de pagos
-    - Stripe
-    - OpenPay
-- [x]  Mecanismos de negociación
-- [x]  Toda actividad debe poder ser trackeada con fines de auditoria.
-- [x]  Que cada agencia pueda configurar la información de sus cuentas bancarias para que ahí se les depositen los pagos por stripe.
-    - Como agencia debes poder ver el historial de pagos
-- [x]  Buscar y visualizar autos sin requerir inicio de sesión
-    - Para comprar sí se requiere cuenta
-- [x]  Almacenar información de los usuarios 🤑
-    - Info confidencial cifrada
-    - Cumplir con estándares de seguridad internacionales
-        - ~~GDPR compliance~~
-    - Mantener info con vigencia
-- [x]  MFA support
-- [x]  Mandar notificaciones a inactivos
-- [x]  Garantizar principio de menor privilegio
-    - Cada quien debe de ver solo lo que le corresponde
-- [x]  Utilizar plataformas y tech stack seguros
+- [x] Compra de autos en cualquier estado
+- [x] Validación de identidad del usuario
+- [x] Buscar autos por reconocimiento de lenguaje natural
+  - Proceso guiado de filtrado
+- [x] Las agencias deben poder configurar los documentos necesarios para el proceso de compra de un auto
+- [x] Ofrecer auto como enganche
+  - Subir fotos
+- [x] Servicio para comunicarte en tiempo real con el vendedor
+- [x] Cada grupo automotriz deben poder configurar sus planes de financiamiento
+  - Planes de arrendamiento
+- [x] Deben poder subir sus seguros
+- [x] Integración de pagos
+  - Stripe
+  - OpenPay
+- [x] Mecanismos de negociación
+- [x] Toda actividad debe poder ser trackeada con fines de auditoria.
+- [x] Que cada agencia pueda configurar la información de sus cuentas bancarias para que ahí se les depositen los pagos por stripe.
+  - Como agencia debes poder ver el historial de pagos
+- [x] Buscar y visualizar autos sin requerir inicio de sesión
+  - Para comprar sí se requiere cuenta
+- [x] Almacenar información de los usuarios
+  - Info confidencial cifrada
+  - Cumplir con estándares de seguridad internacionales
+    - ~~GDPR compliance~~
+  - Mantener info con vigencia
+- [x] MFA support
+- [x] Mandar notificaciones a inactivos
+- [x] Garantizar principio de menor privilegio
+  - Cada quien debe de ver solo lo que le corresponde
+- [x] Utilizar plataformas y tech stack seguros
 
 ## No go’s
 
@@ -44,34 +44,34 @@
 
 ## Roles
 
-- [x]  Superadmin
-    - Revisar solicitudes de las empresas
-    - Aprobar o rechazar agencias
-- [x]  Administrador de un grupo automotriz
-    - Validar documentos en automatico
-        - Acta constitutiva…algo
-        - Registro en el SAT…algo
-        - Comprobante de domicilio
-        - Telefono, correo
-        - Notificar una vez que el proceso sea finalizado
-    - Dar de alta agencias y gerentes
-- [x]  Gerentes de agencias
-    - Puede hacerse cargo de varias agencias
-    - Dar de alta vendedores
-- [x]  Vendedores
-    - Solo pueden pertenecer a una agencia
-    - Gestionar catalogo de vehículos
-    - Solicitudes de pruebas de manejo
-- [x]  Pensar en el usuario
+- [x] Superadmin
+  - Revisar solicitudes de las empresas
+  - Aprobar o rechazar agencias
+- [x] Administrador de un grupo automotriz
+  - Validar documentos en automatico
+    - Acta constitutiva…algo
+    - Registro en el SAT…algo
+    - Comprobante de domicilio
+    - Telefono, correo
+    - Notificar una vez que el proceso sea finalizado
+  - Dar de alta agencias y gerentes
+- [x] Gerentes de agencias
+  - Puede hacerse cargo de varias agencias
+  - Dar de alta vendedores
+- [x] Vendedores
+  - Solo pueden pertenecer a una agencia
+  - Gestionar catalogo de vehículos
+  - Solicitudes de pruebas de manejo
+- [x] Pensar en el usuario
 
 ### Thoughts
 
 - Tech stack a nuestro criterio
 - Value added para la agencia es una plataforma de estadísticas de las ventas
 - Entender bien el proceso de adquisición de un cliente
-    - Necesitamos poder mostrar esta información
+  - Necesitamos poder mostrar esta información
 - Pueden subir sus propios datos
-    - Como podríamos ayudar a integrarlos a nuestro sistema?
+  - Como podríamos ayudar a integrarlos a nuestro sistema?
 - Propuesta del modelo de datos.
 - No es necesario registrarse?
 - Guía autométrica
@@ -87,31 +87,31 @@
 
 ## Stretch feats
 
-- [x]  Comparación entre autos
-- [ ]  ~~Pagos de las mensualidades desde la plataforma~~
-- [x]  Plan de recomendación de autos
-- [x]  Generación de estadísticas
-    - Descarga de reportes
-    - Usuarios que han visto tus vehículos
-        - Desglose de los leads
-- [x]  Ver estadísticas diferentes según el tipo de usuario
-- [x]  Rating y reviews de agencias
-    - MaCHIN lernin
+- [x] Comparación entre autos
+- [ ] ~~Pagos de las mensualidades desde la plataforma~~
+- [x] Plan de recomendación de autos
+- [x] Generación de estadísticas
+  - Descarga de reportes
+  - Usuarios que han visto tus vehículos
+    - Desglose de los leads
+- [x] Ver estadísticas diferentes según el tipo de usuario
+- [x] Rating y reviews de agencias
+  - Machine learning
 
 ## Values
 
 - Transparencia
-    - Mostrar total de pago desglosado
-    - Enganche
-    - Mensualidades
-    - Seguro
+  - Mostrar total de pago desglosado
+  - Enganche
+  - Mensualidades
+  - Seguro
 - Funcionalidad > Diseño
 - User First
 
 ### Monetización
 
-- [x]  Comisión por cada vehículo publicado
-- [x]  Pagar por prioridad de búsqueda
+- [x] Comisión por cada vehículo publicado
+- [x] Pagar por prioridad de búsqueda
 
 ---
 
@@ -149,11 +149,11 @@ Analizar cuanto cuesta por mes operar, cuanto de comision
 
 Para prueba de manejo:
 
-INE 
+INE
 
 Licencia
 
-Cada agencia puede poner poner lo que quiera, puede subir  diferentes formatos.
+Cada agencia puede poner poner lo que quiera, puede subir diferentes formatos.
 
 Para persona fisica:
 
@@ -196,7 +196,7 @@ Acta constitutiva
 
 Cedua fiscal
 
-Documentos legales 
+Documentos legales
 
 Comporbante de domicillio
 
