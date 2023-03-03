@@ -34,7 +34,6 @@ Table of Contents
 * 1 [Introduction](#1-introduction)
   * 1.1 [Document Purpose](#11-document-purpose)
   * 1.2 [Product Scope](#12-product-scope)
-    * 1.2.1 [Epics](#121-epics)
   * 1.3 [Definitions, Acronyms and Abbreviations](#13-definitions-acronyms-and-abbreviations)
   * 1.4 [References](#14-references)
   * 1.5 [Document Overview](#15-document-overview)
@@ -84,7 +83,29 @@ The purpose of this SRS is to provide a detailed explanation of the process that
 ### 1.2 Product Scope
 For this project, we have joined NDS Cognitive Labs to develop a web page that allows simple and intuitive communication between car agencies and their clients. During various meetings with NDS, we identified that one of the main objectives is to allow a smooth online process for both sides. Allowing both salespersons and clients a clear understanding of the current stage of the purchasing process, in addition to an intuitive search option without any technical filters, are some solutions for an easy-to-use service.
 
-### 1.2.1 Epics
+
+### 1.3 Definitions, Acronyms and Abbreviations
+<br>
+
+- AWS - Amazon Web Services
+- Amazon EC2 - Amazon Elastic Compute Cloud
+- Amazon RDS - Amazon Relational Database Service
+- Amazon ELB - Amzaon Elastic Load Balancer
+
+### 1.4 References
+
+
+
+### 1.5 Document Overview
+Describe what the rest of the document contains and how it is organized.
+
+## 2. Product Overview
+> This section should describe the general factors that affect the product and its requirements. This section does not state specific requirements. Instead, it provides a background for those requirements, which are defined in detail in Section 3, and makes them easier to understand.
+
+### 2.1 Product Perspective
+Describe the context and origin of the product being specified in this SRS. For example, state whether this product is a follow-on member of a product family, a replacement for certain existing systems, or a new, self-contained product. If the SRS defines a component of a larger system, relate the requirements of the larger system to the functionality of this software and identify interfaces between the two. A simple diagram that shows the major components of the overall system, subsystem interconnections, and external interfaces can be helpful.
+
+### 2.2 Product Functions
 Thanks to various meetings that we had with NDS, we were able to identify crucial components that were necessary for the final product.
 
 <br>
@@ -122,29 +143,6 @@ The system will allow clients to make the payments online payments directly to t
 The various Agencies will be able to upload their various car catalogs, payments options as well as assurance services.
 
 <br>
-
-### 1.3 Definitions, Acronyms and Abbreviations
-<br>
-
-- AWS - Amazon Web Services
-- Amazon EC2 - Amazon Elastic Compute Cloud
-- Amazon RDS - Amazon Relational Database Service
-- 
-
-### 1.4 References
-List any other documents or Web addresses to which this SRS refers. These may include user interface style guides, contracts, standards, system requirements specifications, use case documents, or a vision and scope document. Provide enough information so that the reader could access a copy of each reference, including title, author, version number, date, and source or location.
-
-### 1.5 Document Overview
-Describe what the rest of the document contains and how it is organized.
-
-## 2. Product Overview
-> This section should describe the general factors that affect the product and its requirements. This section does not state specific requirements. Instead, it provides a background for those requirements, which are defined in detail in Section 3, and makes them easier to understand.
-
-### 2.1 Product Perspective
-Describe the context and origin of the product being specified in this SRS. For example, state whether this product is a follow-on member of a product family, a replacement for certain existing systems, or a new, self-contained product. If the SRS defines a component of a larger system, relate the requirements of the larger system to the functionality of this software and identify interfaces between the two. A simple diagram that shows the major components of the overall system, subsystem interconnections, and external interfaces can be helpful.
-
-### 2.2 Product Functions
-Summarize the major functions the product must perform or must let the user perform. Details will be provided in Section 3, so only a high level summary (such as a bullet list) is needed here. Organize the functions to make them understandable to any reader of the SRS. A picture of the major groups of related requirements and how they relate, such as a top level data flow diagram or object class diagram, is often effective.
 
 ### 2.3 Product Constraints
 This subsection should provide a general description of any other items that will limit the developer’s options. These may include:  
