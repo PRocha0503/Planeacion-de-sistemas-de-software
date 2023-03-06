@@ -32,14 +32,14 @@ Revenue for the dealership |
 - Stripe |
 | REQ_FUN_[009] | Commission Management | The Super Admin will determine commission fees for salesman |
 | REQ_FUN_[010] | Payment types | The client is able to select from a variety of payment types:
-- Down payment
-- Financing
-- Upfront payment |
+Down payment
+Financing
+Upfront payment |
 | REQ_FUN_[011] | Payment methods | The user is able to select the following payment methods
-- Credit
-- Debit
-- Wire Transfer
-- Oxxo |
+Credit
+Debit
+Wire Transfer
+Oxxo |
 
 ## Data visualization
 
@@ -89,23 +89,23 @@ Revenue for the dealership |
 | REQ_FUN_[036] | NDS agent can update automobile group | The super admin can update a automobile group |
 | REQ_FUN_[037] | NDS agent
  | Super admins can view:
-- Dashboard to manage automobile groups |
+Dashboard to manage automobile groups |
 | REQ_FUN_[038] | Car group owner can manage dealerships | Only car group owner can preform the following actions:
--Add dealerships
--Remove Dealerships
--Modify dealerships |
+Add dealerships
+Remove Dealerships
+Modify dealerships |
 | REQ_FUN_[039] | Car group owner can manage dealership management | Only car group owner can preform the following actions:
--Add a manager
--Remove a manager
--Modify a manager |
+Add a manager
+Remove a manager
+Modify a manager |
 | REQ_FUN_[040] | Dealership manager can modify salesmen | Only dealership manager can preform the following actions:
--Add a salesman
--Remove a salesman
--Modify a salesman |
+Add a salesman
+Remove a salesman
+Modify a salesman |
 | REQ_FUN_[041] | Salesman or manager modify cars | Only a salesman or manager can preform:
--Add a car
--Remove a car
--Modify a car |
+Add a car
+Remove a car
+Modify a car |
 | REQ_FUN_[042] | Salesman approve user documents | A salesman can approve or deny user documents |
 | REQ_FUN_[043] | Salesman approve user driving test | A salesman can approve or deny a user driving test |
 | REQ_FUN_[044] | Regular user can see cars | A regular user can see cars |
