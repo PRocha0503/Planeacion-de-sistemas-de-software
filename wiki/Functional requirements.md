@@ -13,7 +13,7 @@ Tags: document
 | REQ*FUN*[002]      | Non login search        | User will be able to make a search without having any account                                          |
 | REQ*FUN*[003]      | Search Priority         | The car appearance will be influenced based on prioritization (extra payment)                          |
 
-## ****\*\*\*\*****\*\*\*\*****\*\*\*\*****Metrics System****\*\*\*\*****\*\*\*\*****\*\*\*\*****
+## **Metrics System**
 
 | ID. Functional REQ | Concept                             | Description/ Criteria of acceptance                                                                        |
 | ------------------ | ----------------------------------- | ---------------------------------------------------------------------------------------------------------- |
