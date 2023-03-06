@@ -17,3 +17,16 @@ Tags: document
 | 010 | Multiple payment methods | Users should be able to pay using different payment methods, such as credit/debit, direct deposit, OXXO. |
 | 011 | Validate ID with external service | Users identity documents should be validated with an external service |
 | 012 | Excel | Dealerships should be able to upload their catalogue through an Excel file |
+| 013 | Operation costs | Determine the costs of running the platform monthly |
+| 014 | Driving test required documents | In order to order a driving test a user needs to provide:
+- Driving License |
+| 015 | Documents to buy a car | To buy a car a user needs to provide:
+- 3 account statements or 6 payrolls (depending on tax regimen)
+- Housing recipt
+- INE or passport
+- Agency form |
+| 016 | Documents for a automobile group | In order to send a request to join the platform, an automobile grup must provide:
+- Acta constitutiuva
+- Cedula fiscal
+- Documentos legales
+- Comprobante de domicilio |

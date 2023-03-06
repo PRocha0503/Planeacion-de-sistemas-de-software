@@ -3,28 +3,94 @@
 Created: February 27, 2023 4:34 PM
 Tags: document
 
-[https://app.cloudcraft.co/view/930d39e6-a3d9-421d-aecf-05c7307facab?key=e6e37a49-c425-4d10-81cc-e2bed02ecad4&interactive=true&embed=true](https://app.cloudcraft.co/view/930d39e6-a3d9-421d-aecf-05c7307facab?key=e6e37a49-c425-4d10-81cc-e2bed02ecad4&interactive=true&embed=true)
+## Architecture first iteration
 
-[https://app.cloudcraft.co/view/930d39e6-a3d9-421d-aecf-05c7307facab?key=e6e37a49-c425-4d10-81cc-e2bed02ecad4&interactive=true&embed=true](https://app.cloudcraft.co/view/930d39e6-a3d9-421d-aecf-05c7307facab?key=e6e37a49-c425-4d10-81cc-e2bed02ecad4&interactive=true&embed=true)
+The first iteration of the diagram, which evolved into the second iteration.
+
+First iteration link: [https://app.cloudcraft.co/view/930d39e6-a3d9-421d-aecf-05c7307facab?key=e6e37a49-c425-4d10-81cc-e2bed02ecad4&interactive=true&embed=true](https://app.cloudcraft.co/view/930d39e6-a3d9-421d-aecf-05c7307facab?key=e6e37a49-c425-4d10-81cc-e2bed02ecad4&interactive=true&embed=true)
 
 ![undefined.png](Architecture/undefined.png)
 
-**General Architecture**
+## Architecture second iteration
 
-![Screen Shot 2023-02-28 at 18.50.02.png](Architecture/Screen_Shot_2023-02-28_at_18.50.02.png)
+Second iteration link: https://drive.google.com/file/d/159ueK4sskirVSlXrt5vOc8zrtNEi-vWX/view?usp=sharing
 
-### Search Subsystem
+### General
 
-![search.png](Architecture/search.png)
+**While we are in the development environment we will use an EC2 server in AWS, here we deploy our application.**
 
-**Business** **Account Creation Subsystem:**
+We’ll have the following containers.
 
-![Screen Shot 2023-02-28 at 18.51.33.png](Architecture/Screen_Shot_2023-02-28_at_18.51.33.png)
+- **Postgresql**: a container that will hold our SQL-style database. Postgres was chosen because although it is a relational database it allows us to save jsonb objects. That is, unstructured or partially structured data. This will give us a nice balance to keep everything tidy, while having the flexibility to add unique attributes to cars or agencies.
+- **Redis**: A cache-style key-value database. It will allow us to have data that is used frequently at a quick reach and improve the user experience.
+- **Admin Dashboard:** Here will live the application of all the roles that are not common users. This includes NDS administrator, automobile group administrator, agency manager, salesperson.
+- **User Dashboard**: It is the page that users who are looking to buy a car or are in the process will see. For the general public.
+- **NGINX** ( optional ): It is open source web server software used for reverse proxying, load balancing, and caching. It provides HTTPS server capabilities and is primarily designed for maximum performance and stability.
 
-**Customer Login:**
+---
 
-![Screen Shot 2023-02-28 at 18.52.36.png](Architecture/Screen_Shot_2023-02-28_at_18.52.36.png)
+### Future
 
-### Communication Subsystem
+Eventually, when we have more traffic and we want to scale our application, we propose to use the following architecture:
 
-![coms.png](Architecture/coms.png)
+[https://lh6.googleusercontent.com/3q3O1177nxC_TR1r1b_XIXeL7GHtloudiyr8JEN-ytSXJWJqD9ptL-aQFEwwsxP4UYicC1J5cXoUEFmFNiF21YjF2KHCYzGO9umwQ7yul8xOa7JnPiosPujCikyLZXCVj4FM8AiCDI7lPZTVjUgEZA](https://lh6.googleusercontent.com/3q3O1177nxC_TR1r1b_XIXeL7GHtloudiyr8JEN-ytSXJWJqD9ptL-aQFEwwsxP4UYicC1J5cXoUEFmFNiF21YjF2KHCYzGO9umwQ7yul8xOa7JnPiosPujCikyLZXCVj4FM8AiCDI7lPZTVjUgEZA)
+
+**In this diagram we can see that we would make use of several technologies in AWS, where we will use:**
+
+| Service                  | Description                                                                                                                                                                         | Reason why                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Amazon Cognito           | Amazon Cognito is used for user sign-up, sign-in, and access control. It provides secure user authentication and authorization.                                                     | This will allow the users to sign to their account information (car status, payment options) knowing that no other user can view their information.                                                                                                                                                                                             |
+| WAF                      | WAF (Web Application Firewall) is used to protect web applications from common web exploits.                                                                                        | Knowing the possibilities of web exploits such as query injections, is important for anyone who works with web applications. These types of attacks can be used to gain unauthorized access to sensitive information or even take control of an entire system. It is crucial to be aware of the potential risks and take steps to prevent them. |
+| Route 53                 | Route 53 is a DNS (Domain Name System) service that translates domain names into IP addresses to locate resources on the internet.                                                  | We will requiere a DNS that will let users access the application form the internet.                                                                                                                                                                                                                                                            |
+| Cloudfront               | Cloudfront is a Content Delivery Network (CDN) that distributes content globally, reducing latency and improving website speed.                                                     | This will distribute the content globally that will reduce the latancy of our users to access our systems                                                                                                                                                                                                                                       |
+| EC2                      | EC2 (Elastic Compute Cloud) provides scalable computing capacity in the cloud.                                                                                                      | Will allow us to provice scalable computing capacity in the cloud.                                                                                                                                                                                                                                                                              |
+| Aplication Load Balancer | Application Load Balancer is a load balancing service that distributes incoming traffic across multiple targets, improving availability and scalability.                            | Will distribue incoming traffic across multiple targets, improving availability and scalability.                                                                                                                                                                                                                                                |
+| ECS                      | ECS (Elastic Container Service) runs and manages Docker containers on a cluster.                                                                                                    | Will allow us to run our different applications with a docker container.                                                                                                                                                                                                                                                                        |
+| RDS ( Postgres )         | RDS (Relational Database Service) is a managed database service that provides a scalable and highly available database solution. Postgres is one of the supported database engines. | Provides a scalable and highly available database solution that will allow us to host our DB.                                                                                                                                                                                                                                                   |
+| Redis                    | Redis is an in-memory data store that provides low-latency data access for read-heavy workloads.                                                                                    | With it low-latency data access for read-heavy workloads we will be able to access most used and important data faster.                                                                                                                                                                                                                         |
+| Elasticsearch            | Elasticsearch is a search and analytics engine that provides fast and scalable search capabilities.                                                                                 | This service will allow us to seach all the cars in a faster way.                                                                                                                                                                                                                                                                               |
+| Chat GPT API             | Chat GPT API is an AI-powered chatbot API that enables natural language processing and automated conversations with users.                                                          | Wee will use this to transfor natural language text into filter to provide the user with the best car.                                                                                                                                                                                                                                          |
+
+**Search system:**
+
+![Screen Shot 2023-03-03 at 18.44.02.png](Architecture/Screen_Shot_2023-03-03_at_18.44.02.png)
+
+We would have a single Endpoint that would receive a Query in natural language, and apart you can receive extra filters to force them in the search.
+
+Elastic search service will be used to facilitate the type of search on a wide variety of fields.
+
+Option B: Simply use **RDS**
+
+**Payments:**
+
+For payments we will use the Stripe platform, and the Stripe Connect service, to facilitate the interaction between agencies, users, and us.
+
+[Diagram](https://lh4.googleusercontent.com/ig5JPBmUS80eEO9pHloqC9CKu8QuS7mEq-KtN4qdTXa_98-zMuFXCw_2Gyq1a7_ofG9b_9K29wC8-bKpJyGyA_gQSGtdfAT2SDdO6sk2qsI3QjTw-AMXKBMLkXV4eAT90-4BvoNuQ1_dPfD3-C5nCg)
+
+**Business Account Creation Subsystem:**
+
+The business logic for creating an account as an agency would be as follow, they would go into our website and fill a form with their data, a super-admin of our platform would be then in charge of reviewing the request details and decide if it should be accepted or denied.
+
+Upon approval a new account would be created and the agency would be notified, upon rejecting we would simply notify the agency and give them the appropriate reason.
+
+[Diagram](https://lh3.googleusercontent.com/0r9NeABLo90CXzaiqi5HdOxXnjr0ddCNasO0BpIqeBuUXDy3RDKi2vLgbvVh28rcwSBvQz_em_DigLm43-bog5KfV3vtXm7p_A_hdTMFW52oj2yZyBNdypWcU1Vg_QDysAl61B7H9o-PM28ET-P_Sw)
+
+**Communication System:**
+
+[Diagram](https://lh6.googleusercontent.com/UnYmqeAhMILkCIT7D0irHL3Nqjd6EYtP5hqT_PoIfis6_53A4KDyIyhXu7MYYpYmJgIuPVHs8ZDV_TJKrgtwsA0JgBM32i5NNyMXSIxirUtI4USIRN0bl4lMm_uff4UC0cfjAXNgoSB7YImRS45pcA)
+
+**Authentication**
+
+[Diagram](https://lh5.googleusercontent.com/bKPLmBAk9gXm030jGXRsUFH8mMUqfsZY1w5K8Wbc1aiYcf4ve--qt9xCahHcM0CO3I0pPo2AiLh1VjcOjm9TNQCGdVOiv66I35IhLT45eAjSDfXv32g6d3cWV9CXyBZxpgT6_RPrkS3cqInQQVpMHQ)
+
+**Metrics System:**
+
+We will have a service that will allow us to generate any type of query to any table based on permissions.
+
+Option:
+
+- We could have predefined metrics we could query
+
+**CRUD: Car Catalogue**
+
+TBD: Configure requirements for purchase and use them on payout
