@@ -13,7 +13,7 @@ Tags: document
 | REQ*FUN*[002]      | Non login search        | User will be able to make a search without having any account                                          |
 | REQ*FUN*[003]      | Search Priority         | The car appearance will be influenced based on prioritization (extra payment)                          |
 
-## ************\*\*\*\*************Metrics System************\*\*\*\*************
+## ****\*\*\*\*****\*\*\*\*****\*\*\*\*****Metrics System****\*\*\*\*****\*\*\*\*****\*\*\*\*****
 
 | ID. Functional REQ | Concept                             | Description/ Criteria of acceptance                                                                        |
 | ------------------ | ----------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -71,27 +71,26 @@ Tags: document
 
 ## Account management
 
-| ID. Functional REQ                                           | Concept                                          | Description/ Criteria of acceptance                                                                             |
-| ------------------------------------------------------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| REQ*FUN*[032]                                                | User Sign up                                     | User will be able able to create an account in the app                                                          |
-| REQ*FUN*[033]                                                | User Log in                                      | The user will be able to use their credentials to log in to the app                                             |
-| REQ*FUN*[034]                                                | NDS agent can add automobile group               | The super admin can approve or deny a automobile group                                                          |
-| REQ*FUN*[035]                                                | NDS agent can remove automobile group            | The super admin can remove a automobile group                                                                   |
-| REQ*FUN*[036]                                                | NDS agent can update automobile group            | The super admin can update a automobile group                                                                   |
-| REQ*FUN*[037]                                                | NDS agent                                        |
-| Super admins can view: Dashboard to manage automobile groups |
-| REQ*FUN*[038]                                                | Car group owner can manage dealerships           | Only car group owner can preform the following actions: Add dealerships, Remove Dealerships, Modify dealerships |
-| REQ*FUN*[039]                                                | Car group owner can manage dealership management | Only car group owner can preform the following actions: Add a manager, Remove a manager, Modify a manager       |
-| REQ*FUN*[040]                                                | Dealership manager can modify salesmen           | Only dealership manager can preform the following actions: Add a salesman, Remove a salesman, Modify a salesman |
-| REQ*FUN*[041]                                                | Salesman or manager modify cars                  | Only a salesman or manager can preform: Add a car, Remove a car, Modify a car                                   |
-| REQ*FUN*[042]                                                | Salesman approve user documents                  | A salesman can approve or deny user documents                                                                   |
-| REQ*FUN*[043]                                                | Salesman approve user driving test               | A salesman can approve or deny a user driving test                                                              |
-| REQ*FUN*[044]                                                | Regular user can see cars                        | A regular user can see cars                                                                                     |
-| REQ*FUN*[045]                                                | A regular user can do all the buying car process | A regular user can do all the process of buying cars                                                            |
-| REQ*FUN*[046]                                                | Automobile group authentication                  | A super admin can validate the documents of an automobile group                                                 |
-| REQ*FUN*[047]                                                | MFA Authentication setup                         | Users can set up MFA methods in their profile                                                                   |
-| REQ*FUN*[048]                                                | MFA Authentication login                         | Users can login with MFA                                                                                        |
-| REQ*FUN*[049]                                                | Validate buyers identity                         | Dealerships can validate buyers documents                                                                       |
+| ID. Functional REQ | Concept                                          | Description/ Criteria of acceptance                                                                             |
+| ------------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| REQ*FUN*[032]      | User Sign up                                     | User will be able able to create an account in the app                                                          |
+| REQ*FUN*[033]      | User Log in                                      | The user will be able to use their credentials to log in to the app                                             |
+| REQ*FUN*[034]      | NDS agent can add automobile group               | The super admin can approve or deny a automobile group                                                          |
+| REQ*FUN*[035]      | NDS agent can remove automobile group            | The super admin can remove a automobile group                                                                   |
+| REQ*FUN*[036]      | NDS agent can update automobile group            | The super admin can update a automobile group                                                                   |
+| REQ*FUN*[037]      | NDS agent                                        | Super admins can view: Dashboard to manage automobile groups                                                    |
+| REQ*FUN*[038]      | Car group owner can manage dealerships           | Only car group owner can preform the following actions: Add dealerships, Remove Dealerships, Modify dealerships |
+| REQ*FUN*[039]      | Car group owner can manage dealership management | Only car group owner can preform the following actions: Add a manager, Remove a manager, Modify a manager       |
+| REQ*FUN*[040]      | Dealership manager can modify salesmen           | Only dealership manager can preform the following actions: Add a salesman, Remove a salesman, Modify a salesman |
+| REQ*FUN*[041]      | Salesman or manager modify cars                  | Only a salesman or manager can preform: Add a car, Remove a car, Modify a car                                   |
+| REQ*FUN*[042]      | Salesman approve user documents                  | A salesman can approve or deny user documents                                                                   |
+| REQ*FUN*[043]      | Salesman approve user driving test               | A salesman can approve or deny a user driving test                                                              |
+| REQ*FUN*[044]      | Regular user can see cars                        | A regular user can see cars                                                                                     |
+| REQ*FUN*[045]      | A regular user can do all the buying car process | A regular user can do all the process of buying cars                                                            |
+| REQ*FUN*[046]      | Automobile group authentication                  | A super admin can validate the documents of an automobile group                                                 |
+| REQ*FUN*[047]      | MFA Authentication setup                         | Users can set up MFA methods in their profile                                                                   |
+| REQ*FUN*[048]      | MFA Authentication login                         | Users can login with MFA                                                                                        |
+| REQ*FUN*[049]      | Validate buyers identity                         | Dealerships can validate buyers documents                                                                       |
 
 ## **Devops**
 
