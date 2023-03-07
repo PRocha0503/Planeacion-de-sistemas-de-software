@@ -24,6 +24,7 @@
 
 # Table of Contents
 
+- [Software Requirements Specification](SRS.md)
 - [Projects Office](wiki/Office.md)
 - [Repositories](wiki/Repositories.md)
 - [Drive Folder](wiki/Drive%20folder.md)
