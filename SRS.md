@@ -122,7 +122,7 @@ In summary, the product scope for this project is to develop a web page that fac
 
 This document is divided into 5 sections. The first section is the introduction, which will explain the purpose of the document, the scope of the project, and the definitions, acronyms and abbreviations that will be used throughout the document. The second section will be the product overview, which will explain the context and origin of the product being specified in this SRS. The third section will be the requirements, which will explain the functional, non-functional, and design requirements of the product. The fourth section will be the verification, which will explain the verification and validation of the product.
 
-The rest of the document will explain the various elements that define how the application is expected to work based on the user characteristics ( vendors and customers), the specific needs of the product owner, as well as the Arquitecture proposal.
+The rest of the document will explain the various elements that define how the application is expected to work based on the user characteristics ( vendors and customers), the specific needs of the product owner, as well as the architecture proposal.
 
 ## 2. Product Overview
 
@@ -176,18 +176,60 @@ The various Agencies will be able to upload their various car catalogs, payments
 
 <br>
 
-### 2.3 Product Constraints
+The full users stories can be found in [User stories](wiki/User%20Stories.md)
 
-This subsection should provide a general description of any other items that will limit the developer’s options. These may include:
+Some potential product constraints for this project could include:
 
-- Interfaces to users, other applications or hardware.
-- Quality of service constraints.
-- Standards compliance.
-- Constraints around design or implementation.
+Interfaces: The web application will need to have a user-friendly interface that allows users to easily search for cars and dealerships. It will also need to have an interface for dealerships to upload their inventory and manage orders. Additionally, the application may need to integrate with other third-party applications or services, such as payment processors or shipping providers.
+Quality of service: The web application should be reliable, fast, and secure. Users should be able to access the site at all times, and their data should be protected from unauthorized access or data breaches. The application should also be scalable to handle increased traffic as more users and dealerships sign up.
+Standards compliance: The application should comply with any relevant industry standards, such as those around data privacy or online sales. It should also adhere to any relevant laws or regulations, such as those governing the sale of vehicles.
+Design and implementation: The application should be designed to be accessible to users with disabilities, and should be optimized for mobile devices as well as desktop computers. The developers may also need to choose a suitable technology stack for the project, taking into account factors such as cost, ease of use, and compatibility with existing systems. Finally, the application should be easy to maintain and update over time.
 
 ### 2.4 User Characteristics
 
 Identify the various user classes that you anticipate will use this product. User classes may be differentiated based on frequency of use, subset of product functions used, technical expertise, security or privilege levels, educational level, or experience. Describe the pertinent characteristics of each user class. Certain requirements may pertain only to certain user classes. Distinguish the most important user classes for this product from those who are less important to satisfy.
+
+There are going to be four types of users in the web application:
+
+#### Regular Users (Car buyers)
+
+- Regular users are able to sign up for a user level account.
+
+- User will be able able to create an account in the app.
+
+- The user will be able to use their credentials to log in to the app.
+
+- A regular user can see cars.
+
+- A regular user can do all the process of buying cars
+
+#### Super Admins (Application manager)
+
+- The super admin can approve or deny a automobile group
+
+- The super admin can remove a automobile group.
+
+- The super admin can update a automobile group.
+
+- Super admins can view: Dashboard to manage automobile groups.
+
+- A super admin can validate the documents of an automobile group.
+
+#### Admins (Car group owner)
+
+- Only car group owner can preform the following actions: Add dealerships, Remove Dealerships, Modify dealerships.
+
+- Only car group owner can preform the following actions: Add a manager, Remove a manager, Modify a manager
+
+#### Managers (Car dealership manager)
+
+- Only dealership manager can preform the following actions: Add a salesman, Remove a salesman, Modify a salesman
+
+#### Salesman (Car dealership salesman)
+
+- Only a salesman or manager can perform: Add a car, Remove a car, Modify a car
+
+- A salesman can approve or deny user documents.
 
 ### 2.5 Assumptions and Dependencies
 
