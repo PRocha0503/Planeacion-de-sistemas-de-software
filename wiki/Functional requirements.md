@@ -34,8 +34,6 @@ Tags: document
 
 ## Data visualization
 
-**TODO**
-
 | ID. Functional REQ | Concept                            | Description/ Criteria of acceptance                                   |
 | ------------------ | ---------------------------------- | --------------------------------------------------------------------- |
 | REQ*FUN*[012]      | Data visualization for admins      | The data generated will be visualized in plots and downloadable csvs. |
