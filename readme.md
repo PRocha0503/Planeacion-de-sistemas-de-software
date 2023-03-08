@@ -38,6 +38,7 @@
 - [WBS](wiki/WBS.md)
 - [Margin Analysis](wiki/Margin%20analysis.md)
 - [Mockup](wiki/Mockup.md)
+- [Database Design](wiki/Database%20design.md)
 - [Questions](wiki/Questions.md)
 - [NDS Meeting Notes](wiki/NDS%20meeting%20notes.md)
 - [Team Presentation](wiki/Team%20Presentation.md)
