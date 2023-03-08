@@ -94,7 +94,7 @@ In addition to serving as a guide for the development team, it will serve as a c
 
 For this document, we are utilizing the Software Requirements Standard (SRS), which consists of guidelines and structure that allow the requirements for better documentation, organization, and consistency.
 
-Using this standard also enhances the communication during implementatio. A standard structure and format for requirements documents make it easier for stakeholders to understand and discuss the requirements, reducing confusion and misunderstandings. Using SRS also facilitates collaboration and work towards the final project envision, reducing time loss and unnecessary work that might occur by unclear requirments.
+Using this standard also enhances the communication during implementatio. A standard structure and format for requirements documents make it easier for stakeholders to understand and discuss the requirements, reducing confusion and misunderstandings. Using SRS also facilitates collaboration and work towards the final project envision, reducing time loss and unnecessary work that might occur by unclear requirements.
 
 ### 1.3 Project Scope
 
