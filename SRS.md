@@ -8,7 +8,7 @@
 
 Version 0.1
 
-Prepared by **Salvador Salgado Normandia**
+Prepared by **Salvador Salgado Normandia, Pablo Rocha, Miguel Arriaga, Jacobo Soffer, Stephan Guingor**
 
 ---
 
@@ -39,46 +39,84 @@ _3/01/2023_
 - [Table of Contents](#table-of-contents)
   - [Revision History](#revision-history)
   - [1. Introduction](#1-introduction)
-    - [1.1 Purpose](#11-document-purpose)
-    - [1.2 Document Conventions](#12-product-scope)
-    - [1.3 Project Scope](#13-definitions-acronyms-and-abbreviations)
+    - [1.1 Purpose](#11-purpose)
+    - [1.2 Document Conventions](#12-document-conventions)
+    - [1.3 Project Scope](#13-project-scope)
     - [1.4 References](#14-references)
-  - [2. Overall Description](#2-product-overview)
+  - [2. Overall Description](#2-overall-description)
     - [2.1 Product Perspective](#21-product-perspective)
-    - [2.2 User Classes and Characteristics](#22-product-functions)
-    - [2.3 Operating Environment](#23-product-constraints)
-    - [2.4 Design and Implementation Constrains](#24-user-characteristics)
+    - [2.2 User Classes and Characteristics](#22-user-classes-and-characteristics)
+      - [Regular Users (Car buyers)](#regular-users-car-buyers)
+      - [Super Admins (Application manager)](#super-admins-application-manager)
+      - [Admins (Car group owner)](#admins-car-group-owner)
+      - [Managers (Car dealership manager)](#managers-car-dealership-manager)
+      - [Salesman (Car dealership salesman)](#salesman-car-dealership-salesman)
+    - [2.3 Operating Environment](#23-operating-environment)
+    - [2.4 Design and Implementation Constrains](#24-design-and-implementation-constrains)
     - [2.5 Assumptions and Dependencies](#25-assumptions-and-dependencies)
   - [3. System Features](#3-system-features)
-    - [3.1 System Feature 1](#31-external-interfaces)
-    - [3.2 System Feature 2](#32-system-fea)
+    - [3.1 Search](#31-search)
+    - [Description](#description)
+    - [Stimulus/Response Sequences](#stimulusresponse-sequences)
+    - [FunctionalRequirements](#functionalrequirements)
+    - [3.2 Metrics System](#32-metrics-system)
+    - [Description](#description-1)
+    - [Stimulus/Response Sequences](#stimulusresponse-sequences-1)
+    - [FunctionalRequirements](#functionalrequirements-1)
+    - [3.3 Payments](#33-payments)
+    - [Description](#description-2)
+    - [Stimulus/Response Sequences](#stimulusresponse-sequences-2)
+    - [Functional Requirements](#functional-requirements)
+    - [3.4 Data visualization](#34-data-visualization)
+    - [Description](#description-3)
+    - [Stimulus/Response Sequences](#stimulusresponse-sequences-3)
+    - [Functional Requirements](#functional-requirements-1)
+    - [3.5 Admin Dashboard](#35-admin-dashboard)
+    - [Description](#description-4)
+    - [Stimulus/Response Sequences](#stimulusresponse-sequences-4)
+    - [Functional Requirements](#functional-requirements-2)
+    - [3.6 User Dashboard](#36-user-dashboard)
+    - [Description](#description-5)
+    - [Stimulus/Response Sequences](#stimulusresponse-sequences-5)
+    - [Functional Requirements](#functional-requirements-3)
+    - [3.7 Account management](#37-account-management)
+    - [Description](#description-6)
+    - [Stimulus/Response Sequences](#stimulusresponse-sequences-6)
+    - [Functional Requirements](#functional-requirements-4)
+    - [3.7 Devops](#37-devops)
+    - [Description](#description-7)
+    - [Stimulus/Response Sequences](#stimulusresponse-sequences-7)
+    - [Functional Requirements](#functional-requirements-5)
   - [4. Data Requirements](#4-data-requirements)
     - [4.1 Logical Data Model](#41-logical-data-model)
     - [4.2 Data Dictionary](#42-data-dictionary)
     - [4.3 Reports](#43-reports)
-    - [4.4 Data Acquisition, Integrity, Retention, and Disposal](#44-aird)
+    - [4.4 Data Acquisition, Integrity, Retention, and Disposal](#44-data-acquisition-integrity-retention-and-disposal)
   - [5. External Interface Requirements](#5-external-interface-requirements)
     - [5.1 User Interfaces](#51-user-interfaces)
+      - [Logical Characteristics of the User Interface](#logical-characteristics-of-the-user-interface)
+      - [Software Components Requiring User Interface](#software-components-requiring-user-interface)
     - [5.2 Software Interfaces](#52-software-interfaces)
+    - [Future](#future)
     - [5.3 Hardware Interfaces](#53-hardware-interfaces)
-    - [5.4 Communications Interface](#54-communications-interfaces)
+    - [5.4 Communications Interfaces](#54-communications-interfaces)
   - [6. Quality Attributes](#6-quality-attributes)
     - [6.1 Usability](#61-usability)
     - [6.2 Performance](#62-performance)
     - [6.3 Security](#63-security)
     - [6.4 Safety](#64-safety)
-    - [6.5 Other](#65-other)
-  - [7. Internationalization and Localization Requirements](#5-appendixes)
+  - [7. Internationalization and Localization Requirements](#7-internationalization-and-localization-requirements)
   - [8. Other Requirements](#8-other-requirements)
-  - [9. Appendix A: Glossary](#9-appendix-a)
+  - [9. Appendix A: Glossary](#9-appendix-a-glossary)
 
 ## Revision History
 
-| Name                                          | Date    | Reason For Changes                   | Version |
-| --------------------------------------------- | ------- | ------------------------------------ | ------- |
-| Salvador Salgado                              | 3/01/23 | Document Creation                    | v0.01   |
-| Miguel Arriaga & Pablo Rocha                  | 3/06/23 | Introduction and Overall Description | v0.02   |
-| Salvador Salgado, Miguel Arriaga, Pablo Rocha | 2/07/23 | Requirements                         | v0.03   |
+| Name                                          | Date    | Reason For Changes                            | Version |
+| --------------------------------------------- | ------- | --------------------------------------------- | ------- |
+| Salvador Salgado                              | 3/01/23 | Document Creation                             | v0.01   |
+| Miguel Arriaga & Pablo Rocha                  | 3/06/23 | Introduction and Overall Description          | v0.02   |
+| Salvador Salgado, Miguel Arriaga, Pablo Rocha | 2/07/23 | Requirements                                  | v0.03   |
+| Miguel Arriaga, Pablo Rocha, Jacobo Soffer    | 2/08/23 | First Version, revised by Gilberto Echeverría | v0.1    |
 
 ## 1. Introduction
 
@@ -157,6 +195,8 @@ There are going to be four types of users in the web application:
 
 - A super admin can validate the documents of an automobile group.
 
+- Super admins can adjust commissions for automobile groups.
+
 #### Admins (Car group owner)
 
 - Only car group owner can preform the following actions: Add dealerships, Remove Dealerships, Modify dealerships.
@@ -166,6 +206,7 @@ There are going to be four types of users in the web application:
 #### Managers (Car dealership manager)
 
 - Only dealership manager can preform the following actions: Add a salesman, Remove a salesman, Modify a salesman
+- Managers can add financing plans to cars.
 
 #### Salesman (Car dealership salesman)
 
@@ -240,13 +281,24 @@ Car search: The application will allow users to search for cars using a variety 
 
 ### 2.5 Assumptions and Dependencies
 
-Apportion the software requirements to software elements. For requirements that will require implementation over multiple software elements, or when allocation to a software element is initially undefined, this should be so stated. A cross reference table by function and software element should be used to summarize the apportioning.
+**Assumptions:**
 
-Identify requirements that may be delayed until future versions of the system (e.g., blocks and/or increments).
+The car agencies have the necessary information and resources to provide accurate and up-to-date information on the vehicles available for sale.
+Clients have access to a stable internet connection and compatible devices to access the web page.
+The payment gateway provider will be able to provide a secure and reliable payment processing system.
+The market research and analysis conducted will accurately identify the common pain points and concerns related to the purchasing process.
+The software development team has the necessary expertise and resources to design and develop the web page according to the identified requirements.
+
+**Dependencies:**
+
+The successful completion of market research and analysis is required before proceeding with the design and development of the web page.
+The availability of car agency representatives for consultation and feedback during the development process.
+The integration of the payment gateway provider's system with the web page.
+The compatibility of the web page with various devices and web browsers.
 
 ## 3. System Features
 
-### 3.1 **Search**
+### 3.1 Search
 
 ### Description
 
@@ -290,7 +342,7 @@ In both use cases, the system responds by displaying relevant information to the
 | REQ*FUN*[002]      | Non login search        | User will be able to make a search without having any account                                          |
 | REQ*FUN*[003]      | Search Priority         | The car appearance will be influenced based on prioritization (extra payment)                          |
 
-### 3.2 **Metrics System**
+### 3.2 Metrics System
 
 ### Description
 
@@ -336,7 +388,7 @@ Response: The Metrics System generates a report showing the sales growth for the
 | REQ*FUN*[007]      | Data recollection for manager       | The data generated by salesman will let the manager know their performance. Revenue for the dealership     |
 | REQ*FUN*[008]      | Log recollection for audit purposes | All important events will be stores for the case of an audit                                               |
 
-### 3.3 **Payments**
+### 3.3 Payments
 
 ### Description
 
@@ -411,7 +463,7 @@ Response: System generates the CSV file and allows user to download it.
 | REQ*FUN*[014]      | Data visualization for salesman    | The data generated will be visualized in plots and downloadable csvs. |
 | REQ*FUN*[015]      | Data visualization for manager     | The data generated will be visualized in plots and downloadable csvs. |
 
-### 3.5 **Admin Dashboard**
+### 3.5 Admin Dashboard
 
 ### Description
 
@@ -453,7 +505,7 @@ Response: Salesman is presented with a list of their ongoing deals and their cur
 | REQ*FUN*[025]      | Dealership admin view                        | The dashboard of the dealership manager will show an overview of the salesmen as well as individual performance |
 | REQ*FUN*[026]      | Salesman view                                | A salesman can view his performance as well as ongoing deals and status                                         |
 
-### 3.6 **User Dashboard**
+### 3.6 User Dashboard
 
 ### Description
 
@@ -591,7 +643,7 @@ Response: The app displays the profile page where the user can set up MFA method
 | REQ*FUN*[048]      | MFA Authentication login                         | Users can login with MFA                                                                                        |
 | REQ*FUN*[049]      | Validate buyers identity                         | Dealerships can validate buyers documents                                                                       |
 
-### 3.7 **Devops**
+### 3.7 Devops
 
 ### Description
 
@@ -1007,7 +1059,7 @@ In addition to the functional requirements mentioned in this document, it is als
 | 004                   | All Day access                    | A user must be able to access the system all day                                                                                                                   |
 | 005                   | NL search                         | The car search will be made with natural language support                                                                                                          |
 | 006                   | 3rd party payment                 | A third party will be used for payments                                                                                                                            |
-| 007                   | Support 1000 users at a time      | The system must support at least 1000 users at a time                                                                                                              |
+| 007                   | Scalable system                   | Scalable architecture to support the business needs                                                                                                                |
 | 008                   | Support social login              | The system must allow users to sign up/sign in using a social media provider (eg. Google, Facebook)                                                                |
 | 009                   | AWS                               | The infrastructure should be deployed on AWS                                                                                                                       |
 | 010                   | Multiple payment methods          | Users should be able to pay using different payment methods, such as credit/debit, direct deposit, OXXO.                                                           |
@@ -1020,6 +1072,22 @@ In addition to the functional requirements mentioned in this document, it is als
 
 ## 9. Appendix A: Glossary
 
-<Define any specialized terms that a reader needs to know to understand the SRS, including acronyms and abbreviations. Spell out each acronym and provide its definition. Consider building a reusable enterprise-level glossary that spans multiple projects and incorporating by reference any terms that pertain to this project.>
-
 - VPC: Virtual Private Cloud.
+- GUI: Graphical User Interface
+- HTTP: Hypertext Transfer Protocol
+- HTTPS: Hypertext Transfer Protocol Secure
+- SQL: Structured Query Language
+- SMTP: Simple Mail Transfer Protocol
+- POP3: Post Office Protocol version 3
+- IMAP: Internet Message Access Protocol
+- Stripe: A standard payment gateway used for processing payments from clients.
+- TCP/IP: Transmission Control Protocol/Internet Protocol
+- SSL: Secure Sockets Layer
+- TLS: Transport Layer Security
+- REST APIs: Representational State Transfer Application Programming Interfaces
+- Webhooks: A mechanism used for notifying software systems about events occurring within external systems.
+- HTTP: Hypertext Transfer Protocol
+- MIME: Multipurpose Internet Mail Extensions
+- TLS: Transport Layer Security
+- REST: Representational State Transfer
+- API: Application Programming Interface
