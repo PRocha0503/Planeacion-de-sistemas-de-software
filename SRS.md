@@ -1050,6 +1050,22 @@ In addition to the functional requirements mentioned in this document, it is als
 
 ## 9. Appendix A: Glossary
 
-<Define any specialized terms that a reader needs to know to understand the SRS, including acronyms and abbreviations. Spell out each acronym and provide its definition. Consider building a reusable enterprise-level glossary that spans multiple projects and incorporating by reference any terms that pertain to this project.>
-
 - VPC: Virtual Private Cloud.
+- GUI: Graphical User Interface
+- HTTP: Hypertext Transfer Protocol
+- HTTPS: Hypertext Transfer Protocol Secure
+- SQL: Structured Query Language 
+- SMTP: Simple Mail Transfer Protocol
+- POP3: Post Office Protocol version 3
+- IMAP: Internet Message Access Protocol
+- Stripe: A standard payment gateway used for processing payments from clients.
+- TCP/IP: Transmission Control Protocol/Internet Protocol
+- SSL: Secure Sockets Layer
+- TLS: Transport Layer Security
+- REST APIs: Representational State Transfer Application Programming Interfaces
+- Webhooks: A mechanism used for notifying software systems about events occurring within external systems.
+- HTTP: Hypertext Transfer Protocol
+- MIME: Multipurpose Internet Mail Extensions
+- TLS: Transport Layer Security
+- REST: Representational State Transfer
+- API: Application Programming Interface
