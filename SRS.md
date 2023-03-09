@@ -84,7 +84,7 @@ _3/01/2023_
 
 ### 1.1 Purpose
 
-This is s a comprehensive document that outlines the requirements and specifications for the software project. It serves as a roadmap for the development team, providing a clear understanding of what is expected of the software and how it will be designed, developed, tested, and deployed.
+This is a comprehensive document that outlines the requirements and specifications for the software project. It serves as a roadmap for the development team, providing a clear understanding of what is expected of the software and how it will be designed, developed, tested, and deployed.
 
 It will define the scope of the software project, including its goals, objectives, features, and functions. It provides a clear description of the software's behavior, user interactions, and performance requirements. It identifies any constraints or limitations that may affect the software's design and development.
 
@@ -94,7 +94,7 @@ In addition to serving as a guide for the development team, it will serve as a c
 
 For this document, we are utilizing the Software Requirements Standard (SRS), which consists of guidelines and structure that allow the requirements for better documentation, organization, and consistency.
 
-Using this standard also enhances the communication during implementatio. A standard structure and format for requirements documents make it easier for stakeholders to understand and discuss the requirements, reducing confusion and misunderstandings. Using SRS also facilitates collaboration and work towards the final project envision, reducing time loss and unnecessary work that might occur by unclear requirements.
+Using this standard also enhances the communication during implementation. A standard structure and format for requirements documents make it easier for stakeholders to understand and discuss the requirements, reducing confusion and misunderstandings. Using SRS also facilitates collaboration and work towards the final project envision, reducing time loss and unnecessary work that might occur by unclear requirements.
 
 ### 1.3 Project Scope
 
@@ -808,23 +808,147 @@ By implementing these techniques and policies, the car selling web application c
 
 ## 5. External Interface Requirements
 
-<This section provides information to ensure that the system will communicate properly with users and with external hardware or software elements.>
-
 ### 5.1 User Interfaces
 
-<Describe the logical characteristics of each interface between the software product and the users. This may include sample screen images, any GUI standards or product family style guides that are to be followed, screen layout constraints, standard buttons and functions (e.g., help) that will appear on every screen, keyboard shortcuts, error message display standards, and so on. Define the software components for which a user interface is needed. Details of the user interface design should be documented in a separate user interface specification.>
+#### Logical Characteristics of the User Interface
+
+The user interface of the web page developed for this project should be intuitive and easy to use for both salespersons and clients. The interface should provide clear and concise information regarding the current stage of the purchasing process, and it should facilitate real-time communication between car agencies and their clients.
+
+The following are some logical characteristics of the user interface:
+
+- A simple, intuitive interface that allows clients to search for their desired vehicle without encountering technical barriers or complex filters.
+
+- A responsive design that ensures the software is accessible on all devices, including desktops, tablets, and smartphones
+
+- Real-time communication between car agencies and their clients, providing clear and concise information regarding the current stage of the purchasing process
+
+- An easy-to-use service that simplifies the online purchasing process for all parties involved.
+
+- Error message display standards that are clear and concise, providing the user with helpful information to resolve any issues.
+
+Some mockups for the web application are provided in [Mockup](wiki/Mockup.md), as well as bellow:
+
+![sign up](SRS_media/signup.png)
+![login](SRS_media/login.png)
+![main](SRS_media/main.png)
+![search1](SRS_media/search1.png)
+![search2](SRS_media/search2.png)
+
+#### Software Components Requiring User Interface
+
+The following are the software components for which a user interface is required:
+
+- Home page: The home page should provide an overview of the web page's main features and functionality, as well as a clear call-to-action for clients to search for their desired vehicle.
+- Vehicle search: The vehicle search page should allow clients to search for their desired vehicle using natural language search, simplifying the online purchasing process.
+- Vehicle details: The vehicle details page should provide clients with detailed information about the selected vehicle, including features, specifications, and pricing.
+- Purchase process: The purchase process should be divided into clear and concise steps, providing clients with information regarding the current stage of the process and any required actions.
+- Payment processing: The payment processing page should allow clients to securely and easily complete their purchase, with clear information regarding the payment process.
+
+Overall, the user interface specification document will provide a more detailed analysis of the logical characteristics of each interface between the software product and the users, including sample screen images, GUI standards or product family style guides, screen layout constraints, standard buttons and functions, keyboard shortcuts, error message display standards, and more.
 
 ### 5.2 Software Interfaces
 
-<Describe the connections between this product and other software components (identified by name and version), including other applications, databases, operating systems, tools, libraries, websites, and integrated commercial components. State the purpose, formats, and contents of the messages, data, and control values exchanged between the software components. Specify the mappings of input and output data between the systems and any translations that need to be made for the data to get from one system to the other. Describe the services needed by or from external software components and the nature of the intercomponent communications. Identify data that will be exchanged between or shared across software components. Specify nonfunctional requirements affecting the interface, such as service levels for responses times and frequencies, or security controls and restrictions.>
+**While we are in the development environment we will use an EC2 server in AWS, here we deploy our application.**
+
+We’ll have the following containers.
+
+- **Postgresql**: a container that will hold our SQL-style database. Postgres was chosen because although it is a relational database it allows us to save jsonb objects. That is, unstructured or partially structured data. This will give us a nice balance to keep everything tidy, while having the flexibility to add unique attributes to cars or agencies.
+- **Redis**: A cache-style key-value database. It will allow us to have data that is used frequently at a quick reach and improve the user experience.
+- **Admin Dashboard:** Here will live the application of all the roles that are not common users. This includes NDS administrator, automobile group administrator, agency manager, salesperson.
+- **User Dashboard**: It is the page that users who are looking to buy a car or are in the process will see. For the general public.
+- **NGINX** ( optional ): It is open source web server software used for reverse proxying, load balancing, and caching. It provides HTTPS server capabilities and is primarily designed for maximum performance and stability.
+
+---
+
+### Future
+
+Eventually, when we have more traffic and we want to scale our application, we propose to use the following architecture:
+
+[Future Architecture](https://lh6.googleusercontent.com/3q3O1177nxC_TR1r1b_XIXeL7GHtloudiyr8JEN-ytSXJWJqD9ptL-aQFEwwsxP4UYicC1J5cXoUEFmFNiF21YjF2KHCYzGO9umwQ7yul8xOa7JnPiosPujCikyLZXCVj4FM8AiCDI7lPZTVjUgEZA)
+
+**In this diagram we can see that we would make use of several technologies in AWS, where we will use:**
+
+| Service                  | Description                                                                                                                                                                         | Reason why                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Amazon Cognito           | Amazon Cognito is used for user sign-up, sign-in, and access control. It provides secure user authentication and authorization.                                                     | This will allow the users to sign to their account information (car status, payment options) knowing that no other user can view their information.                                                                                                                                                                                             |
+| WAF                      | WAF (Web Application Firewall) is used to protect web applications from common web exploits.                                                                                        | Knowing the possibilities of web exploits such as query injections, is important for anyone who works with web applications. These types of attacks can be used to gain unauthorized access to sensitive information or even take control of an entire system. It is crucial to be aware of the potential risks and take steps to prevent them. |
+| Route 53                 | Route 53 is a DNS (Domain Name System) service that translates domain names into IP addresses to locate resources on the internet.                                                  | We will requiere a DNS that will let users access the application form the internet.                                                                                                                                                                                                                                                            |
+| Cloudfront               | Cloudfront is a Content Delivery Network (CDN) that distributes content globally, reducing latency and improving website speed.                                                     | This will distribute the content globally that will reduce the latancy of our users to access our systems                                                                                                                                                                                                                                       |
+| EC2                      | EC2 (Elastic Compute Cloud) provides scalable computing capacity in the cloud.                                                                                                      | Will allow us to provice scalable computing capacity in the cloud.                                                                                                                                                                                                                                                                              |
+| Aplication Load Balancer | Application Load Balancer is a load balancing service that distributes incoming traffic across multiple targets, improving availability and scalability.                            | Will distribue incoming traffic across multiple targets, improving availability and scalability.                                                                                                                                                                                                                                                |
+| ECS                      | ECS (Elastic Container Service) runs and manages Docker containers on a cluster.                                                                                                    | Will allow us to run our different applications with a docker container.                                                                                                                                                                                                                                                                        |
+| RDS ( Postgres )         | RDS (Relational Database Service) is a managed database service that provides a scalable and highly available database solution. Postgres is one of the supported database engines. | Provides a scalable and highly available database solution that will allow us to host our DB.                                                                                                                                                                                                                                                   |
+| Redis                    | Redis is an in-memory data store that provides low-latency data access for read-heavy workloads.                                                                                    | With it low-latency data access for read-heavy workloads we will be able to access most used and important data faster.                                                                                                                                                                                                                         |
+| Elasticsearch            | Elasticsearch is a search and analytics engine that provides fast and scalable search capabilities.                                                                                 | This service will allow us to seach all the cars in a faster way.                                                                                                                                                                                                                                                                               |
+| Chat GPT API             | Chat GPT API is an AI-powered chatbot API that enables natural language processing and automated conversations with users.                                                          | Wee will use this to transfor natural language text into filter to provide the user with the best car.                                                                                                                                                                                                                                          |
+
+**Search system:**
+
+![Search diagram](wiki/Architecture/Screen_Shot_2023-03-03_at_18.44.02.png)
+
+We would have a single Endpoint that would receive a Query in natural language, and apart you can receive extra filters to force them in the search.
+
+Elastic search service will be used to facilitate the type of search on a wide variety of fields.
+
+Option B: Simply use **RDS**
+
+**Payments:**
+
+For payments we will use the Stripe platform, and the Stripe Connect service, to facilitate the interaction between agencies, users, and us.
+
+![Payments Diagram](https://lh4.googleusercontent.com/ig5JPBmUS80eEO9pHloqC9CKu8QuS7mEq-KtN4qdTXa_98-zMuFXCw_2Gyq1a7_ofG9b_9K29wC8-bKpJyGyA_gQSGtdfAT2SDdO6sk2qsI3QjTw-AMXKBMLkXV4eAT90-4BvoNuQ1_dPfD3-C5nCg)
+
+**Business Account Creation Subsystem:**
+
+The business logic for creating an account as an agency would be as follow, they would go into our website and fill a form with their data, a super-admin of our platform would be then in charge of reviewing the request details and decide if it should be accepted or denied.
+
+Upon approval a new account would be created and the agency would be notified, upon rejecting we would simply notify the agency and give them the appropriate reason.
+
+![Business Diagram](https://lh3.googleusercontent.com/0r9NeABLo90CXzaiqi5HdOxXnjr0ddCNasO0BpIqeBuUXDy3RDKi2vLgbvVh28rcwSBvQz_em_DigLm43-bog5KfV3vtXm7p_A_hdTMFW52oj2yZyBNdypWcU1Vg_QDysAl61B7H9o-PM28ET-P_Sw)
+
+**Communication System:**
+
+![Communication Diagram](https://lh6.googleusercontent.com/UnYmqeAhMILkCIT7D0irHL3Nqjd6EYtP5hqT_PoIfis6_53A4KDyIyhXu7MYYpYmJgIuPVHs8ZDV_TJKrgtwsA0JgBM32i5NNyMXSIxirUtI4USIRN0bl4lMm_uff4UC0cfjAXNgoSB7YImRS45pcA)
+
+**Authentication**
+
+![Authenitcation Diagram](https://lh5.googleusercontent.com/bKPLmBAk9gXm030jGXRsUFH8mMUqfsZY1w5K8Wbc1aiYcf4ve--qt9xCahHcM0CO3I0pPo2AiLh1VjcOjm9TNQCGdVOiv66I35IhLT45eAjSDfXv32g6d3cWV9CXyBZxpgT6_RPrkS3cqInQQVpMHQ)
+
+**Metrics System:**
+
+We will have a service that will allow us to generate any type of query to any table based on permissions.
+
+Option:
+
+- We could have predefined metrics we could query
+
+**CRUD: Car Catalogue**
+
+TBD: Configure requirements for purchase and use them on payout
 
 ### 5.3 Hardware Interfaces
 
-<Describe the characteristics of each interface between the software and hardware (if any) components of the system. This description might include the supported device types, the data and control interactions between the software and the hardware, and the communication protocols to be used. List the inputs and outputs, their formats, their valid values or ranges, and any timing issues developers need to be aware of. If this information is extensive, consider creating a separate interface specification document.>
+Web Browser Interface: This interface allows the user to interact with the software through a web browser. The interface supports standard web technologies such as HTML, CSS, and JavaScript. The input includes mouse clicks, keyboard input, and touchscreen input. The output includes graphical user interface (GUI) elements such as buttons, text boxes, and drop-down menus. The data interaction includes exchanging data between the user and the software, such as client information, vehicle specifications, and transaction details. The communication protocol used is HTTP or HTTPS.
+
+Database Interface: This interface allows the software to store and retrieve data from a database. The interface supports standard database technologies such as SQL. The input includes database queries and transactions. The output includes database records and query results. The data interaction includes exchanging data between the software and the database, such as client information, vehicle specifications, and transaction details. The communication protocol used is typically SQL over a network.
+
+Email Interface: This interface allows the software to send and receive email messages. The interface supports standard email protocols such as SMTP, POP3, and IMAP. The communication protocol used is typically SMTP or IMAP.
+
+Payment Gateway Interface: This interface allows the software to process payments from clients. The interface supports standard payment gateway Stripe. The input includes payment details such as credit card information, billing address, and transaction amounts. The output includes transaction status and receipt information. The data interaction includes exchanging data between the software and the payment gateway, such as transaction details, invoices, and receipts. The communication protocol used is typically HTTPS.
 
 ### 5.4 Communications Interfaces
 
-<State the requirements for any communication functions the product will use, including e-mail, Web browser, network protocols, and electronic forms. Define any pertinent message formatting. Specify communication security or encryption issues, data transfer rates, handshaking, and synchronization mechanisms. State any constraints around these interfaces, such as whether e-mail attachments are acceptable or not.>
+Email: The product will use email for login/sign up, password reset, and other notifications. The product should support the latest email protocols such as SMTP and IMAP. The product should also support the latest email standards such as MIME and HTML.
+
+Web Browser: The product should be accessible through standard web browsers such as Google Chrome, Mozilla Firefox, and Microsoft Edge. The user interface should be designed to be responsive and user-friendly across different web browsers and platforms. The product should support the latest web technologies and should be compatible with popular web standards such as HTML, CSS, and JavaScript.
+
+Network Protocols: The product should use standard network protocols such as TCP/IP, HTTP, and HTTPS. The communication protocols should ensure secure and reliable data transfer between car agencies and their clients.
+
+Communication Security and Encryption: The product should ensure secure communication between car agencies and their clients. The communication should be encrypted using standard encryption protocols such as SSL or TLS. The product should also provide mechanisms to authenticate and authorize users to prevent unauthorized access to the system.
+
+Data Transfer Rates: The product should ensure efficient data transfer between car agencies and their clients. The data transfer rates should be optimized to provide a seamless and fast user experience.
+
+Handshaking and Synchronization Mechanisms: The product should include handshaking and synchronization mechanisms to ensure reliable communication between car agencies and their clients. The product should use standard synchronization mechanisms such as REST APIs and Webhooks.
 
 ## 6. Quality Attributes
 
