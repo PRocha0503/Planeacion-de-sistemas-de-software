@@ -59,7 +59,7 @@ _3/01/2023_
     - [Description](#description)
     - [Stimulus/Response Sequences](#stimulusresponse-sequences)
     - [FunctionalRequirements](#functionalrequirements)
-    - [3.2 **Metrics System**](#32-metrics-system)
+    - [3.2 Metrics System](#32-metrics-system)
     - [Description](#description-1)
     - [Stimulus/Response Sequences](#stimulusresponse-sequences-1)
     - [FunctionalRequirements](#functionalrequirements-1)
@@ -194,6 +194,8 @@ There are going to be four types of users in the web application:
 
 - A super admin can validate the documents of an automobile group.
 
+- Super admins can adjust commissions for automobile groups.
+
 #### Admins (Car group owner)
 
 - Only car group owner can preform the following actions: Add dealerships, Remove Dealerships, Modify dealerships.
@@ -203,6 +205,7 @@ There are going to be four types of users in the web application:
 #### Managers (Car dealership manager)
 
 - Only dealership manager can preform the following actions: Add a salesman, Remove a salesman, Modify a salesman
+- Managers can add financing plans to cars.
 
 #### Salesman (Car dealership salesman)
 
@@ -320,7 +323,7 @@ In both use cases, the system responds by displaying relevant information to the
 | REQ*FUN*[002]      | Non login search        | User will be able to make a search without having any account                                          |
 | REQ*FUN*[003]      | Search Priority         | The car appearance will be influenced based on prioritization (extra payment)                          |
 
-### 3.2 **Metrics System**
+### 3.2 Metrics System
 
 ### Description
 
@@ -1054,7 +1057,7 @@ In addition to the functional requirements mentioned in this document, it is als
 - GUI: Graphical User Interface
 - HTTP: Hypertext Transfer Protocol
 - HTTPS: Hypertext Transfer Protocol Secure
-- SQL: Structured Query Language 
+- SQL: Structured Query Language
 - SMTP: Simple Mail Transfer Protocol
 - POP3: Post Office Protocol version 3
 - IMAP: Internet Message Access Protocol
