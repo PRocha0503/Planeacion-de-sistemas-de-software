@@ -131,6 +131,48 @@ The larger system that this product will be a component of is the car sales proc
 
 ### 2.2 User Classes and Characteristics
 
+There are going to be four types of users in the web application:
+
+#### Regular Users (Car buyers)
+
+- Regular users are able to sign up for a user level account.
+
+- User will be able able to create an account in the app.
+
+- The user will be able to use their credentials to log in to the app.
+
+- A regular user can see cars.
+
+- A regular user can do all the process of buying cars
+
+#### Super Admins (Application manager)
+
+- The super admin can approve or deny a automobile group
+
+- The super admin can remove a automobile group.
+
+- The super admin can update a automobile group.
+
+- Super admins can view: Dashboard to manage automobile groups.
+
+- A super admin can validate the documents of an automobile group.
+
+#### Admins (Car group owner)
+
+- Only car group owner can preform the following actions: Add dealerships, Remove Dealerships, Modify dealerships.
+
+- Only car group owner can preform the following actions: Add a manager, Remove a manager, Modify a manager
+
+#### Managers (Car dealership manager)
+
+- Only dealership manager can preform the following actions: Add a salesman, Remove a salesman, Modify a salesman
+
+#### Salesman (Car dealership salesman)
+
+- Only a salesman or manager can perform: Add a car, Remove a car, Modify a car
+
+- A salesman can approve or deny user documents.
+
 Thanks to various meetings that we had with NDS, we were able to identify crucial components that were necessary for the final product.
 
 <br>
@@ -183,49 +225,7 @@ Some potential product constraints for this project could include:
 
 ### 2.3 Operating Environment
 
-Identify the various user classes that you anticipate will use this product. User classes may be differentiated based on frequency of use, subset of product functions used, technical expertise, security or privilege levels, educational level, or experience. Describe the pertinent characteristics of each user class. Certain requirements may pertain only to certain user classes. Distinguish the most important user classes for this product from those who are less important to satisfy.
-
-There are going to be four types of users in the web application:
-
-#### Regular Users (Car buyers)
-
-- Regular users are able to sign up for a user level account.
-
-- User will be able able to create an account in the app.
-
-- The user will be able to use their credentials to log in to the app.
-
-- A regular user can see cars.
-
-- A regular user can do all the process of buying cars
-
-#### Super Admins (Application manager)
-
-- The super admin can approve or deny a automobile group
-
-- The super admin can remove a automobile group.
-
-- The super admin can update a automobile group.
-
-- Super admins can view: Dashboard to manage automobile groups.
-
-- A super admin can validate the documents of an automobile group.
-
-#### Admins (Car group owner)
-
-- Only car group owner can preform the following actions: Add dealerships, Remove Dealerships, Modify dealerships.
-
-- Only car group owner can preform the following actions: Add a manager, Remove a manager, Modify a manager
-
-#### Managers (Car dealership manager)
-
-- Only dealership manager can preform the following actions: Add a salesman, Remove a salesman, Modify a salesman
-
-#### Salesman (Car dealership salesman)
-
-- Only a salesman or manager can perform: Add a car, Remove a car, Modify a car
-
-- A salesman can approve or deny user documents.
+List the hardware and software environments in which the software will operate. This includes the hardware and software that will be used to develop the software, as well as the hardware and software that will be used to run the software. If the software will be deployed on multiple platforms, identify the platforms and the software that will be used to deploy the software on each platform. If the software will be deployed on multiple platforms, identify the platforms and the software that will be used to deploy the software on each platform.
 
 ### 2.4 Design and Implementation Constrains
 
