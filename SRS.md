@@ -8,7 +8,7 @@
 
 Version 0.1
 
-Prepared by **Salvador Salgado Normandia**
+Prepared by **Salvador Salgado Normandia, Pablo Rocha, Miguel Arriaga, Jacobo Soffer, Stephan Guingor**
 
 ---
 
@@ -111,11 +111,12 @@ _3/01/2023_
 
 ## Revision History
 
-| Name                                          | Date    | Reason For Changes                   | Version |
-| --------------------------------------------- | ------- | ------------------------------------ | ------- |
-| Salvador Salgado                              | 3/01/23 | Document Creation                    | v0.01   |
-| Miguel Arriaga & Pablo Rocha                  | 3/06/23 | Introduction and Overall Description | v0.02   |
-| Salvador Salgado, Miguel Arriaga, Pablo Rocha | 2/07/23 | Requirements                         | v0.03   |
+| Name                                          | Date    | Reason For Changes                            | Version |
+| --------------------------------------------- | ------- | --------------------------------------------- | ------- |
+| Salvador Salgado                              | 3/01/23 | Document Creation                             | v0.01   |
+| Miguel Arriaga & Pablo Rocha                  | 3/06/23 | Introduction and Overall Description          | v0.02   |
+| Salvador Salgado, Miguel Arriaga, Pablo Rocha | 2/07/23 | Requirements                                  | v0.03   |
+| Miguel Arriaga, Pablo Rocha, Jacobo Soffer    | 2/08/23 | First Version, revised by Gilberto Echeverría | v0.1    |
 
 ## 1. Introduction
 
