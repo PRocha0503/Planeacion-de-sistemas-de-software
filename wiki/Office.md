@@ -6,7 +6,7 @@ Tags: activity, document
 
 # Nombre e imagen de la oficina
 
-![Untitled](Office%20635c27e61f0740f8bf9dc3c5a46b02c0/Untitled.png)
+![Untitled](/wiki/Office/Untitled.png)
 
 # Valores
 

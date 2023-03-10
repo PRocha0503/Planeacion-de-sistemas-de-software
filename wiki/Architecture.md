@@ -10,7 +10,7 @@ The first iteration of the diagram, which evolved into the second iteration.
 
 First iteration link: [https://app.cloudcraft.co/view/930d39e6-a3d9-421d-aecf-05c7307facab?key=e6e37a49-c425-4d10-81cc-e2bed02ecad4&interactive=true&embed=true](https://app.cloudcraft.co/view/930d39e6-a3d9-421d-aecf-05c7307facab?key=e6e37a49-c425-4d10-81cc-e2bed02ecad4&interactive=true&embed=true)
 
-![undefined.png](Architecture%2031e4c634362b4dfa9c7e64b228eb473f/undefined.png)
+![undefined.png](/wiki/Architecture/undefined.png)
 
 ## Architecture second iteration
 
@@ -34,11 +34,11 @@ We’ll have the following containers.
 
 ---
 
-![Screen Shot 2023-03-06 at 21.01.44.png](Architecture%2031e4c634362b4dfa9c7e64b228eb473f/Screen_Shot_2023-03-06_at_21.01.44.png)
+![Screen Shot 2023-03-06 at 21.01.44.png](/wiki/Architecture/Screen_Shot_2023-03-06_at_21.01.44.png)
 
 ## Third Iteration
 
-![k8s_arch.drawio (1).png](Architecture%2031e4c634362b4dfa9c7e64b228eb473f/k8s_arch.drawio_(1).png)
+![k8s_arch.drawio (1).png](/wiki/Architecture/k8s_arch.drawio_(1).png)
 
 This iteration replaces the use of Docker Compose running on a single server with a Kubernetes cluster. All services (including frontends) use Redis as a cache layer. Pods are managed through deployment, making scalability easy.
 
@@ -48,7 +48,7 @@ This iteration replaces the use of Docker Compose running on a single server wit
 
 *Architecture for priority system:*
 
-![Screen Shot 2023-03-09 at 21.02.59.png](Architecture%2031e4c634362b4dfa9c7e64b228eb473f/Screen_Shot_2023-03-09_at_21.02.59.png)
+![Screen Shot 2023-03-09 at 21.02.59.png](/wiki/Architecture/Screen_Shot_2023-03-09_at_21.02.59.png)
 
 With this subsystem agencies are able to pay via stripe for a promotion on their listing, this will increase the rank on their listing. When we query from the search service, this will do two requests to ES one to get some listings to recommend based on ranking and another with the most relevant items.
 
@@ -88,7 +88,7 @@ Eventually, when we have more traffic and we want to scale our application, we p
 
 **Search system:**
 
-![Screen Shot 2023-03-03 at 18.44.02.png](Architecture%2031e4c634362b4dfa9c7e64b228eb473f/Screen_Shot_2023-03-03_at_18.44.02.png)
+![Screen Shot 2023-03-03 at 18.44.02.png](/wiki/Architecture/Screen_Shot_2023-03-03_at_18.44.02.png)
 
 We would have a single Endpoint that would receive a Query in natural language, and apart you can receive extra filters to force them in the search.
 

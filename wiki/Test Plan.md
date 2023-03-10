@@ -258,7 +258,7 @@ The web functionality that will be tested includes:
 
 ************SCOPE:************ Main component interactions (Priority High in functional requirements)
 
-[**Functional requirements**](Functional%20requirements%2036adc23280a84f60a2592556a6c3cf47.md)
+[**Functional requirements**](/wiki/Functional%20requirements.md)
 
 ****************TESTERS:**************** Testing team, preferably one developer for each component that is being tested.
 

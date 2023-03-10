@@ -6,14 +6,14 @@ Tags: document
 
 [Figma](https://www.figma.com/team_invite/redeem/eHBSEXI92xPqN3vMjpN6Cz)
 
-[Color Theory](Mockup%20d323fcb9e6cd46bd9b80529a6f9fe1e0/Color%20Theory%208e5eca2113ed471580f4e083205e0ed4.md)
+[Color Theory](/wiki/Mockup/Color%20Theory.md)
 
-![signup.png](Mockup%20d323fcb9e6cd46bd9b80529a6f9fe1e0/signup.png)
+![signup.png](/wiki/Mockup/signup.png)
 
-![login.png](Mockup%20d323fcb9e6cd46bd9b80529a6f9fe1e0/login.png)
+![login.png](/wiki/Mockup/login.png)
 
-![main.png](Mockup%20d323fcb9e6cd46bd9b80529a6f9fe1e0/main.png)
+![main.png](/wiki/Mockup/main.png)
 
-![search1.png](Mockup%20d323fcb9e6cd46bd9b80529a6f9fe1e0/search1.png)
+![search1.png](/wiki/Mockup/search1.png)
 
-![search2.png](Mockup%20d323fcb9e6cd46bd9b80529a6f9fe1e0/search2.png)
+![search2.png](/wiki/Mockup/search2.png)

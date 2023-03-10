@@ -40,7 +40,7 @@ Tags: activity
 
 ## Gantt diagram
 
-[Tasks](Burger%20King%20Activity%20ebf42e048b46445d887722bc525551af/Tasks%208b3594892b114c15b96c14cadf6c8b56.md)
+[Tasks](/wiki/Burger%20King%20Activity/Tasks.csv)
 
 # Resumen de la lectura
 
