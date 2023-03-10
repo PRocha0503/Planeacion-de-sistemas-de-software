@@ -266,11 +266,18 @@ Some potential product constraints for this project could include:
 
 ### 2.3 Operating Environment
 
-List the hardware and software environments in which the software will operate. This includes the hardware and software that will be used to develop the software, as well as the hardware and software that will be used to run the software. If the software will be deployed on multiple platforms, identify the platforms and the software that will be used to deploy the software on each platform. If the software will be deployed on multiple platforms, identify the platforms and the software that will be used to deploy the software on each platform.
+The system uses a micro service architecture where every service will run on a Linux based Docker container on any host operating system. Because of this, no software or hardware limitations are considered for this system, as long as it supports running Docker, which any fairly modern platform should support. However, a minimum of 2 CPU cores and 4 GB of RAM
+is suggested to run the system.
 
 ### 2.4 Design and Implementation Constrains
 
-List any assumed factors (as opposed to known facts) that could affect the requirements stated in the SRS. These could include third-party or commercial components that you plan to use, issues around the development or operating environment, or constraints. The project could be affected if these assumptions are incorrect, are not shared, or change. Also identify any dependencies the project has on external factors, such as software components that you intend to reuse from another project, unless they are already documented elsewhere (for example, in the vision and scope document or the project plan).
+Cloud: The application will be hosted on a cloud platform, such as Amazon Web Services. This will allow the application to scale easily as the number of users and dealerships increases.
+
+Safety: The application will be designed to be secure and reliable. It will use HTTPS to encrypt all data in transit, and will use a database that is protected from unauthorized access. The application will also be designed to be resilient to common types of attacks, such as SQL injection and cross-site scripting.
+
+Standards compliance: The application will comply with any relevant industry standards, such as those around data privacy or online sales. It will also adhere to any relevant laws or regulations, such as those governing the sale of vehicles.
+
+Car search: The application will allow users to search for cars using a variety of filters, such as make, model, price, and location. It will also allow users to search for cars using natural language, such as “red car for 6 people”.
 
 ### 2.5 Assumptions and Dependencies
 
