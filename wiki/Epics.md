@@ -1,13 +1,14 @@
 # Epics
 
 Created: February 24, 2023 5:26 PM
-Tags: project plan
+Last edited time: March 2, 2023 7:48 PM
+Tags: document
 
 **Facilitate Car Search for non Technical Clients** 
 
 The system will be able to allow car searches without the help of advanced filters.  
 
-ex: “Big red car for 6 persons”
+ex: “Big red car for 6 people”
 
 **Facilitate Acquisition process**
 

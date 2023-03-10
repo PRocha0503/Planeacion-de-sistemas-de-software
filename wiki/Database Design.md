@@ -1,7 +1,7 @@
 # Database Design
 
 Created: March 1, 2023 7:25 PM
-Last edited time: March 7, 2023 7:18 PM
+Last edited time: March 8, 2023 8:15 PM
 Tags: document
 
 [nds | DrawSQL](https://drawsql.app/teams/tec-de-monterrey-3/diagrams/nds)
@@ -12,6 +12,7 @@ Tags: document
 | --- |
 | id: text |
 | email: text |
+| verified: boolean |
 | name: text |
 | last_name: text |
 | profile_pic_url: text |
@@ -22,6 +23,7 @@ Tags: document
 | id: bigint |
 | user_id: text |
 | role: text |
+| dealer_id: text |
 | autogroup_id: text |
 | prev: text |
 
@@ -149,3 +151,12 @@ Tags: document
 | started: timestamp |
 | active: boolean |
 | last_active: timestamp |
+
+| business_account_request |
+| --- |
+| id: bigint |
+| status: string |
+| created_at: timestamp |
+|  |
+|  |
+|  |
