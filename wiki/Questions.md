@@ -1,6 +1,7 @@
 # Questions
 
 Created: February 13, 2023 8:19 PM
+Last edited time: March 9, 2023 5:22 PM
 Tags: note
 
 - ¿Qué tipo de datos contienen los registros de los vehículos?
@@ -19,3 +20,6 @@ Tags: note
 - 1 de Marzo
     
     ¿Qué se debería de hacer con reembolsos de pagos?
+    
+
+Fijar Cobros

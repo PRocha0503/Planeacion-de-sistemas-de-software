@@ -1,6 +1,7 @@
 # Burger King Activity
 
 Created: February 17, 2023 5:37 PM
+Last edited time: March 2, 2023 6:31 PM
 Tags: activity
 
 ## Caso de Burger King, para meter un nuevo producto a su menu
@@ -39,7 +40,7 @@ Tags: activity
 
 ## Gantt diagram
 
-[Tasks](Burger%20King%20Activity/Tasks.csv)
+[Tasks](Burger%20King%20Activity%20ebf42e048b46445d887722bc525551af/Tasks%208b3594892b114c15b96c14cadf6c8b56.md)
 
 # Resumen de la lectura
 

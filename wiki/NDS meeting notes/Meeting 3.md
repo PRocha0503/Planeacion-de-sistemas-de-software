@@ -15,29 +15,29 @@ Tarifas:
 
 </aside>
 
-**Respuesta:**
+**Respuesta:** 
 
 - Campos fijos + campos abiertos
 - Les gustó la idea de la ficha técnica
 - Definir características comunes y usarlos como standard
-  - Marca
-  - Modelo: año
-  - Submarca
-  - Color
-  - Que motor tiene
-  - Litros del motor
-  - Turbo/ No turbo
-  - Caballos de Fuerza
-  - Torque
+    - Marca
+    - Modelo: año
+    - Submarca
+    - Color
+    - Que motor tiene
+    - Litros del motor
+    - Turbo/ No turbo
+    - Caballos de Fuerza
+    - Torque
 - También características abiertas
-  - AC (sub divisiones)
+    - AC (sub divisiones)
 
 <aside>
 ❓ En caso de que se cuente con un proceso de compra de automóviles donde ya se haya realizado un pago, ¿Es posible hacer una cancelación o pedir un reembolso?
 
 </aside>
 
-********\*\*\*\*********Respuesta:********\*\*\*\*********
+********************Respuesta:********************
 
 - Tramite de cancelación no es muy común.
 - Plataformas de pago permiten hacer cancelaciones (Reintegro).

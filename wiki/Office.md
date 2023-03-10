@@ -1,11 +1,12 @@
 # Office
 
 Created: February 13, 2023 7:42 PM
+Last edited time: March 2, 2023 6:32 PM
 Tags: activity, document
 
 # Nombre e imagen de la oficina
 
-![Untitled](Office/Untitled.png)
+![Untitled](Office%20635c27e61f0740f8bf9dc3c5a46b02c0/Untitled.png)
 
 # Valores
 
@@ -24,4 +25,4 @@ Elevar el estándar de planeación y desarrollo en México generando proyectos d
 
 # Misión
 
-Planear y desarrollar proyectos de calidad mundial apegándose a las mejores prácticas y estándares comerciales internacionales, siguiendo los requerimientos dados por el cliente para dar el mejor resultado posible y construir juntos productos y servicios de alta calidad.
+Planear y desarrollar proyectos de calidad mundial apegándose a  las mejores prácticas y estándares comerciales internacionales, siguiendo los requerimientos dados por el cliente para dar el mejor resultado posible y construir juntos productos y servicios de alta calidad.
