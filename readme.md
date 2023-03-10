@@ -42,4 +42,5 @@
 - [Questions](wiki/Questions.md)
 - [NDS Meeting Notes](wiki/NDS%20meeting%20notes.md)
 - [Team Presentation](wiki/Team%20Presentation.md)
-- [Burger King Activity](wiki/Burger%20King%20Activity.md)
+- [Test Plan](wiki/Test%20Plan.md)
+- [Risk analysis](wiki/Risk%20analysis.md)

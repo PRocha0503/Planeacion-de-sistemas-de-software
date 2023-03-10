@@ -57,7 +57,6 @@ def pathPossibilities(path):
 
 def renamePaths():
     for file in absPathsArr:
-        # todo search for files in the page and update them
         for key in pathsDict:
             try:
                 inplace_change(file, key, pathsDict[key])
@@ -70,24 +69,63 @@ def inplace_change(filename, old_string, new_string):
     with open(filename) as f:
         s = f.read()
         if old_string not in s:
-            print('"{old_string}" not found in {filename}.'.format(**locals()))
             return
 
     # Safely write the changed content, if found in the file
     with open(filename, 'w') as f:
-        print(
-            'Changing "{old_string}" to "{new_string}" in {filename}'.format(**locals()))
         s = s.replace(old_string, new_string)
         f.write(s)
+
+
+def buildIndex(folder, filename="readme.md"):
+    indexPaths = {}
+    count = 0
+    for file in os.listdir(folder):
+        # Checking if the file is present in the list
+        name = os.path.join(folder, file)
+        if ".md" not in file:
+            continue
+        else:
+            title = name[name.find("/")+1:name.find(".md")]
+            name = addSpaceCharacter(name)
+            indexPath = f"- [{title}]({name})"
+            indexPaths[name] = indexPath
+
+    for indexPath in indexPaths:
+        with open(filename) as f:
+            s = f.read()
+            if indexPath.lower() in s.lower():
+                # File already in index
+                continue
+
+        # Safely write the new file to index
+        with open(filename, 'a') as f:
+            if count > 0:
+                f.write(f"\n{indexPaths[indexPath]}")
+            else:
+                if endsWithWhitespace(filename):
+                    f.write(f"{indexPaths[indexPath]}")
+                else:
+                    f.write(f"\n{indexPaths[indexPath]}")
+            count += 1
+
+
+def endsWithWhitespace(filename):
+    with open(filename, "rb") as file:
+        try:
+            file.seek(-2, os.SEEK_END)
+            while file.read(1) != b'\n':
+                file.seek(-2, os.SEEK_CUR)
+        except OSError:
+            file.seek(0)
+        last_line = file.readline().decode()
+    return "\n" in last_line
 
 
 def main():
     rename(folder, folder)
     renamePaths()
-    # wiki/Risk%20analysis.md
-    # print(os.listdir())
-    # print(os.getcwd())
-    # inplace_change(r"wiki/Risk analysis.md", "a", "a")
+    buildIndex(folder)
 
 
 if __name__ == "__main__":
