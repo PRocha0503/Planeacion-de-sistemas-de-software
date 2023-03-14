@@ -1,7 +1,7 @@
 # Test Plan
 
 Created: March 6, 2023 5:25 PM
-Last edited time: March 13, 2023 8:21 PM
+Last edited time: March 14, 2023 6:12 AM
 Tags: document
 
 # Table of contents
@@ -26,8 +26,7 @@ Jacobo Soffer Levy
 
 | Version | Date | Author | Description of Change |
 | --- | --- | --- | --- |
-| 0.0.1 | 06/03/2023 | Pablo Rocha, Miguel Arriaga, Jacobo Soffer | Initial Commit:
-Structure and introduction |
+| 0.0.1 | 06/03/2023 | Pablo Rocha, Miguel Arriaga, Jacobo Soffer | Initial Commit: Structure and introduction |
 | 0.0.2 | 08/03/2023 | Salvador Salgado | Test Strategy |
 | 0.0.3 | 13/03/2023 | Pablo Rocha, Miguel Arriaga, Jacobo Soffer, Salvador Salgado, Stephan Guingor | Execution strategy and corrections |
 
@@ -44,8 +43,8 @@ Structure and introduction |
 
 | Version | Date | Document |
 | --- | --- | --- |
-| v2 |  @March 3, 2023  | /wiki/Functional%20requirements.md  |
-| v2 | @March 3, 2023  | /wiki/Non%20Functional%20requirements.md  |
+| v2 |  @March 3, 2023  | https://github.com/PRocha0503/Planeacion-de-sistemas-de-software/blob/main/wiki/Functional%20requirements.md |
+| v2 | @March 3, 2023  | https://github.com/PRocha0503/Planeacion-de-sistemas-de-software/blob/main/wiki/Non%20Functional%20requirements.md |
 
 # 1. Introduction
 
@@ -425,8 +424,7 @@ Front End only
 
 | Num. | Main functionality | Minutes |
 | --- | --- | --- |
-| 1 | Authentication. Fulfill requirements: REQ_FUN_[002], REQ_FUN_[032], REQ_FUN_[033], REQ_FUN_[046], REQ_FUN_[047], REQ_FUN_[048] 
- | 220 |
+| 1 | Authentication. Fulfill requirements: REQ_FUN_[002], REQ_FUN_[032], REQ_FUN_[033], REQ_FUN_[046], REQ_FUN_[047], REQ_FUN_[048] | 220 |
 | 2 | Role management | 150 |
 | 3 | Search | 310 |
 | 4 | Consumer Dashboard | 100 |
@@ -538,7 +536,7 @@ This section will be completed in the following sprints.
 
 **Integration Template:**
 
-6**.1 Integration test case I1**
+**6.1 Integration test case I1**
 
 | Test Case Identifier | I1T1 |
 | --- | --- |
