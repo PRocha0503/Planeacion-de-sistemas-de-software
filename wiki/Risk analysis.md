@@ -1,19 +1,15 @@
 # Risk analysis
 
 Created: March 9, 2023 7:49 PM
-Last edited time: March 9, 2023 8:53 PM
+Last edited time: March 13, 2023 5:17 PM
 Tags: document
 
 | Risk No. | Description | Mitigation Action | Owner | Probability | Impact |
 | --- | --- | --- | --- | --- | --- |
-| 1 | SQL Injection | By using AWS WAF be will reduce the possiblilty of SQL injection attacks by filtering traffic at the appliaction layer. |  | High | High |
-| 2 | Access to unauthorized information.  |  |  |  |  |
-| 3 | DoS Attack:
-Malicious attempt to overwhelm a service by flooding it with traffic. | Use AWS WAF to block IPS that are flooding the system. |  | Low | Medium |
-| 4 | Man-in-the-middle attacks |  |  |  |  |
-| 5 | Web Scraping
-It is considered a cyberattack when web scraping involves extracting data without permission. In the case of malicious intent, web scraping can put personal information and intellectual property at risk. | Adding reCaptcha en important places of the application. |  | Medium | Low |
-| 7 | Due that the users are able to upload their documents, it could occur that an attacker could upload malware that could affect both the functionality and user privacy. |  |  |  |  |
-| 8 | Brute Force
-A brute-force attack is a continuous attempt to guess login credentials and gain access to the protected areas of the application. | Block an account after X amount of attempts to login. |  | Medium | High |
-| 10 | Database corruption/loss | Daily Backup to recover up to date data. |  | Low | High |
+| 1 | SQL Injection | Prune user inputs to avoid SQL inputs. | Development team | High | High |
+| 2 | DoS Attack:
+Malicious attempt to overwhelm a service by flooding it with traffic | Block IP user that makes more 1000 requests per minute. | Development team | Low | Medium |
+| 3 | Database corruption/loss | Daily Backup to recover up to data. | Development team | Low | High |
+| 4 | New teammates integrating to the project might lead to misunderstanding on work flow as well as the development planning and architecture | Assign a manager to each of the teams, all the managers will have weekly meetings with the project leader. The sprint plannings will happen here. | Product Manager | High | High |
+| 5 | Running out of AWS credits | Pipeline that can deploy the project to new AWS accounts. | Developer Team | Medium | Low |
+| 6 | As we purpose having different containers (per feature) for the development stages, at the moment of merging all of them into the final application, some features might break and need to be refactored. | Every two weeks, join all the containers and verify that everything is working as intended. | Architect | High | Medium |

@@ -44,3 +44,6 @@
 - [Team Presentation](wiki/Team%20Presentation.md)
 - [Test Plan](wiki/Test%20Plan.md)
 - [Risk analysis](wiki/Risk%20analysis.md)
+- [Project plan presentation](wiki/Project%20plan%20presentation.md)
+- [Test code templates](wiki/Test%20code%20templates.md)
+- [Burger King Activity](wiki/Burger%20King%20Activity.md)

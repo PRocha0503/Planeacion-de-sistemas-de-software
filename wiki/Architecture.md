@@ -1,7 +1,7 @@
 # Architecture
 
 Created: February 27, 2023 4:34 PM
-Last edited time: March 9, 2023 9:27 PM
+Last edited time: March 9, 2023 9:47 PM
 Tags: document
 
 ## Architecture first iteration
@@ -48,21 +48,49 @@ This iteration replaces the use of Docker Compose running on a single server wit
 
 *Architecture for priority system:*
 
-![Screen Shot 2023-03-09 at 21.02.59.png](/wiki/Architecture/Screen_Shot_2023-03-09_at_21.02.59.png)
+![Screen Shot 2023-03-09 at 21.28.40.png](/wiki/Architecture/Screen_Shot_2023-03-09_at_21.28.40.png)
 
 With this subsystem agencies are able to pay via stripe for a promotion on their listing, this will increase the rank on their listing. When we query from the search service, this will do two requests to ES one to get some listings to recommend based on ranking and another with the most relevant items.
 
-Tasks: 
+**Tasks:** 
 
-Total SP: 
+AVG Vel Per Week ( 5 people ): 55 
 
-| ID | Name | Description | Estimate |
-| --- | --- | --- | --- |
-|  | create listings promote endpoint | Creates the function that’s in charge of returning a payment intent to the frontend | 5 |
-|  | create webhook handler for stripe | Process payment events related to promotion and trigger microservice finish-promotion-for-listing so it  updates ranks back to default value | 3 |
-|  | create process promotion success |  |  |
+Total SP: **31**
+
+| ID | Name | Description | Estimate | SCOPE |
+| --- | --- | --- | --- | --- |
+|  | create listings promote endpoint | Creates the function that’s in charge of returning a payment intent to the frontend | 3 | BACKEND |
+|  | create webhook handler for stripe | Process payment events related to promotion and trigger microservice process-promotion-for-listing  | 3 | BACKEND |
+|  | create process promotion success | Will update listing to have new rank and will schedule a a job to run a microservice in a month. ( finish-promotion-for-listing | 3 | BACKEND |
+|  | finish-promotion-for-listing | Updates listing rank back to default and sends an email to notify the user | 5 | BACKEND |
+|  | configure logstash container | Creates config files to run logstash in k8s | 3 | BACKEND |
+|  | use logstash to pipeline data from aggregated listings to ES | create files to map PG to ES | 5 | BACKEND |
+|  | create chat GPT client  | Creates a simple client so we can use it in the search system | 3 | BACKEND |
+|  | create search endpoint | Service to query listings from elastic search, and returns 2 ads and rest of normal search | 3 | BACKEND |
+|  | create ES storage to be used in search endpoint | Functions that interact with elastic, for the operations we will use in the search endpoint | 3 | BACKEND |
+|  | configure ES in k8s | Make sure ES container is running properly | 5 | BACKEND |
 
 *Architecture for charging per listing each month:*
+
+![Screen Shot 2023-03-09 at 21.43.41.png](/wiki/Architecture/Screen_Shot_2023-03-09_at_21.43.41.png)
+
+This system will create subscriptions that will track usage of the listing the user has published, it will charge at the end of the month using stripe subscriptions, and with a cron job add initial usage to clients based on their listings.
+
+**************************************Architecture for commision per user payment:**************************************
+
+**Tasks:** 
+
+AVG Vel Per Week ( 5 people ): 55 
+
+Total SP: **13**
+
+| ID | Name | Description | Estimate | SCOPE |
+| --- | --- | --- | --- | --- |
+|  | create subscription endpoint | Creates the function that’s in charge of creating a stripe subscription | 5 | BACKEND |
+|  | create webhook handler for stripe | Update delearship status to know its a paying delearship | 3 | BACKEND |
+|  | create start-usage-new-month service | Will set initial usage for the upcoming month | 3 | BACKEND |
+|  | create service to create a listing | We should track usage when we create a new listing | 2 | BACKEND |
 
 ### Future
 

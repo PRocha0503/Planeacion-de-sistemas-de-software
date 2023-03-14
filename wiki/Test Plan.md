@@ -1,7 +1,7 @@
 # Test Plan
 
 Created: March 6, 2023 5:25 PM
-Last edited time: March 9, 2023 8:41 PM
+Last edited time: March 13, 2023 8:21 PM
 Tags: document
 
 # Table of contents
@@ -28,14 +28,15 @@ Jacobo Soffer Levy
 | --- | --- | --- | --- |
 | 0.0.1 | 06/03/2023 | Pablo Rocha, Miguel Arriaga, Jacobo Soffer | Initial Commit:
 Structure and introduction |
-| 0,0.2 | 08/03/2023 | Salvador Salgado | Test Strategy |
+| 0.0.2 | 08/03/2023 | Salvador Salgado | Test Strategy |
+| 0.0.3 | 13/03/2023 | Pablo Rocha, Miguel Arriaga, Jacobo Soffer, Salvador Salgado, Stephan Guingor | Execution strategy and corrections |
 
 ## Approvers Lists
 
 | Name | Role | Status | Approval Date | Signature |
 | --- | --- | --- | --- | --- |
 | Gilberto Echeverria |  |  |  |  |
-| Esteban Castillo Juarez |  |  |  |  |
+| Esteban Castillo Juarez | Testing reviewer | Reviewed, gave us pointers | @March 13, 2023  |  |
 | Eduardo Rubinstein |  |  |  |  |
 | Ivan Santiago |  |  |  |  |
 
@@ -43,8 +44,8 @@ Structure and introduction |
 
 | Version | Date | Document |
 | --- | --- | --- |
-|  |  |  |
-|  |  |  |
+| v2 |  @March 3, 2023  | /wiki/Functional%20requirements.md  |
+| v2 | @March 3, 2023  | /wiki/Non%20Functional%20requirements.md  |
 
 # 1. Introduction
 
@@ -54,7 +55,11 @@ The purpose of the testing document  is to outline the various tests that will b
 
 In particular it will include:
 
-- 
+- This is a test plan for a project that aims to create a website for purchasing cars online.
+- The document outlines the purpose of the testing, the project overview, and the intended audience.
+- The test strategy includes informal and black-box testing, as well as unit, integration, and end-to-end testing.
+- The document lists the test objectives, assumptions, and acceptance criteria for unit, integration, and end-to-end testing.
+- The functional requirements that will be tested include user authentication, role management, search feature, consumer dashboard, admin dashboard, car and dealership upload, payments, and data visualization.
 
 ## 1.2 Project Overview
 
@@ -73,14 +78,62 @@ In summary:
 - This document will be written by team members for them to use, including members of other teams in case that our project gets selected to use for the entire class.
 - The approvers will also be able to read and review this document, indicating in case of any comments or areas of opportunities.
 - The SCRUM master will use this document to plan the sprints in which the testing will occur, ensuring that the deadlines for the testing are met.
-- This document will also be part of our wiki, in case that the clients want to review the document and make sure that the testing requirements are being satisfied.
-- The developers must use this document in order to write tests or perform manual tests as it is indicated in this document.
+- The SCRUM master will also use this documents to comply with the static tests.
+- This document will also be part of our wiki, in case that the clients and stakeholders want to review the document and make sure that the testing requirements are being satisfied.
+- The developers must use this document in order to write dynamic tests (unit tests) or perform manual tests as it is indicated in this document.
+- The static tests will be conducted by the management team: the project management and SCRUM master.
 
 # 2. Test strategy
 
 ## 2.1 Test Description
 
-Taking into account the project deadline and complexity of the project the team has decided to create a strategy that focuses on black-box testing and informal testing. 
+### 2.2.1 Dinamic tests:
+
+****************************Informal tests****************************
+
+| Purpose | SCOPE | TESTERS | METHOD | TIMING |
+| --- | --- | --- | --- | --- |
+| Informal tests will be used as part of “test driven development”, in which each developer will informally test their code. | Directly in the code: functions, classes, endpoints, etc. | Every developer of the team. | Informal tests will be based on pieces of code written by developers. | When coding |
+
+**Unit testing**
+
+| Purpose | SCOPE | TESTERS | METHOD | TIMING |
+| --- | --- | --- | --- | --- |
+| To comprehensively test each section of the software and determine whether the software satisfies the requirements. | Unit testing will be conducted on all important sections (priority Medium or High in functional requirements). | The testing team will be responsible for conducting unit tests. | The unit testing process will employ user stories, use cases, and input-output sections. In the event that the testing results in failure, white box testing will be implemented. | Unit testing will be conducted at the start of each cycle. |
+
+**Integration testing**
+
+| Purpose | SCOPE | TESTERS | METHOD | TIMING |
+| --- | --- | --- | --- | --- |
+| Integration testing will allow us to verify different components in the system work together as intended. This includes third party systems such as a payment processor. | Main component interactions (Priority High in functional requirements) | Testing team, preferably one developer for each component that is being tested. | Integration testing will draw on user stories and functional requirements. In case of failure white box testing will be used, extending to the individual components being tested if needed and possible. | Integration testing will be conducted after two or more components are integrated, the components involved change their public interfaces or at the end of each cycle. |
+
+**End to end testing**
+
+| Purpose | SCOPE | TESTERS | METHOD | TIMING |
+| --- | --- | --- | --- | --- |
+| E2E tests will allow us to ensure the platform is working as expected from the point of view of a user. | Main user interactions with the platform | Testing team would be in charge of creating integration tests, ideally the team responsible for each system. | E2E testing will be based on main user stories from each service. This will be a type of black box testing where we only care about user actions and the expected output. | When completing the service E2E tests will be created |
+
+### 2.2.2 Static tests:
+
+**Route:**
+
+| Purpose | SCOPE | TESTERS | METHOD | TIMING |
+| --- | --- | --- | --- | --- |
+| Document that indicates the flow of the application. | The UI functionalities of the web application. | Project manager / SCRUM master | Diagrams will be made at the end of each feature as well as at the end of development | At the end of each feature. |
+
+**Api documentation:**
+
+| Purpose | SCOPE | TESTERS | METHOD | TIMING |
+| --- | --- | --- | --- | --- |
+| Evaluate the product by checking its conformance to the development standards, guidelines and specifications. | All API endpoints. | Backend testers. | It will be created with a reliable tool such as swagger. | All the time in backend. |
+
+**User manual:**
+
+| Purpose | SCOPE | TESTERS | METHOD | TIMING |
+| --- | --- | --- | --- | --- |
+| Provide an installation and usage manual in order for the users and clients to use the application. | The manual will cover the installation and use of the UI functionalities of the web application. | Project manager / SCRUM Master. | The project manager will create a user manual with the help of some developers. | Before every important deployment with the final version once the application is finished. |
+
+Taking into account the project deadline and complexity of the project the team has decided to create a strategy that focuses on black-box testing and informal testing. Test will only be ran in functional requirements.
 
 This was decides as black-box testing is particularly useful when there is limited time for testing.  By focusing on black-box testing and informal testing, the team can will identify any major issues or bugs in the system without spending too much time on testing.
 
@@ -89,10 +142,6 @@ On the other hand as is it is a complex project with many modules, it may be dif
 Finally as we will be working in big team black-box and informal testing will allow all developers to create tests for any part of the system as they will not need to know all the insides of the code.
 
 We will mainly focus on un unit, integration and some end to end testing. This will  ensure that the system is thoroughly tested at all levels. By testing each component in isolation, as well as how different components work together and the system as a whole, the team can identify and address any issues or bugs early in the development process, before they become more difficult and costly to fix.
-
-- Unit testing is  automated and can be run quickly, making it an efficient way to identify and address issues early in the development process.
-- Integration testing is important for our complex systems with many interconnected components, where it can be difficult to identify issues through other types of testing..
-- End-to-end testing simulates real-world scenarios and user interactions, and can help the team identify any issues or bugs that may arise in the system.
 
 ## 2.2 Test Objectives
 
@@ -220,7 +269,7 @@ The web functionality that will be tested includes:
     - With incorrect information dealership is not added
 - A salesman or dealership manager is able to manage  dealership cars
     - The car data can be added
-    - Car addons can be added
+    - Car add-ons can be added
     - Car spec sheet can be added
     - Car can be removed
     - Car data can be edited
@@ -238,45 +287,9 @@ The web functionality that will be tested includes:
 - Agency Users are able view graphs of how much each vendor is selling
 - Agency Users are able to view a graph with MRR, expected MRR for next month
 
-## 2.6 Levels of Testing
+## 2.6 Test acceptance criteria
 
 ### 2.6.1 Unit testing
-
-**PURPOSE**: The purpose of unit testing is to comprehensively test each section of the software and determine whether the software satisfies the requirements.
-
-**SCOPE**: Unit testing will be conducted on all important sections(priority Medium or High in functional requirements).
-
-**TESTERS**: The testing team will be responsible for conducting unit tests.
-
-**METHOD**: The unit testing process will employ user stories, use cases, and input-output sections. In the event that the testing results in failure, white box testing will be implemented.
-
-**TIMING**: Unit testing will be conducted at the start of each cycle.
-
-### 2.6.2 Integration testing
-
-**************PURPOSE**************: Integration testing will allow us to verify different components in the system work together as intended. This includes third party systems such as a payment processor.
-
-************SCOPE:************ Main component interactions (Priority High in functional requirements)
-
-[**Functional requirements**](/wiki/Functional%20requirements.md)
-
-****************TESTERS:**************** Testing team, preferably one developer for each component that is being tested.
-
-****************METHOD:**************** Integration testing will draw on user stories and functional requirements. In case of failure white box testing will be used, extending to the individual components being tested if needed and possible.
-
-****************TIMING:**************** Integration testing will be conducted after two or more components are integrated, the components involved change their public interfaces or at the end of each cycle.
-
-### 2.6.3 End to end testing
-
-**PURPOSE**: E2E tests will allow us to ensure the platform is working as expected from the point of view of a user.
-**SCOPE**:  Main user interactions with the platform
-**TESTERS**: Testing team would be in charge of creating integration tests, ideally the team responsible for each system.
-**METHOD**: E2E testing will be based on main user stories from each service. This will be a type of black box testing where we only care about user actions and the expected output.
-**TIMING**: when completing the service e2e tests will be created
-
-## 2.7 Test acceptance criteria
-
-### 2.7.1 Unit testing
 
 ****************************Authentication****************************
 
@@ -327,16 +340,18 @@ Front End only
 - Users can see and apply filters from the UI.
 - If no results are found, the user is presented with a helpful error message / related searches.
 
-### 2.7.2 Integration testing
+### 2.6.2 Integration testing
 
-> Nota: Para search hacer integration test the natural language y del url. Casi todo lo de search es un integration test.
-> 
+****************************Authentication****************************
+
+- The frontend can reach the backend and obtain a token.
+- If invalid credentials are provided, the backend returns an error.
 
 **Payments functionality:**
 
-- At the end of the month the user should recieve an email with the total usage, it should be automatically charged to the preferred method
+- At the end of the month the user should receive an email with the total usage, it should be automatically charged to the preferred method
 - Track usage of created listings in stripe
-- Transferring money to destination account from user, and getting a commision to NDS account.
+- Transferring money to destination account from user, and getting a commission to NDS account.
 
 **Search functionality:**
 
@@ -350,34 +365,52 @@ Front End only
 
 **Admin Dashboard:**
 
-- Salesmans should only be able to create new cars, car variants and new listings
+- Salesmen should only be able to create new cars, car variants and new listings
 - Admins should be able to create agencies
 - Managers should not be able to see other agencies
 
 **Metrics System:**
 
-- Depending on a rol you can see different metrics
+- Depending on a role you can see different metrics
 - Logs are being generated after creating a subscription
 
 **Devops:**
 
-- After a merge to production containers are deployed to cloud enviorment with k8s
+- After a merge to production containers are deployed to cloud environment with k8s
 
-### 2.7.3 End to end testing
+### 2.6.3 End to end testing
 
-- 
-- 
+************Admin Dashboard:************
 
-## 2.8 Test Deliverables
+- Admins are able to change the role of a user.
+- The change is reflected immediately for the user.
+
+********Chat********
+
+- Users can start a chat session and send messages.
+- Salesmen are able to see the messages and reply.
+- The reply is seen immediately on the user side.
+
+****************Payments****************
+
+- Admins are able to register a bank account through Stripe.
+- Admins are able to visualize their payments through the Stripe portal.
+- Users are able to complete a purchase and this is:
+    - Reflected in our systems upon payment completion.
+    - The money is deposited to the dealer account immediately.
+
+## 2.7 Test Deliverables
 
 | No. | Name | Author | Reviewer |
 | --- | --- | --- | --- |
-| 1 | Test Plan | Team | Esteban Castillo |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
+| 1 | Test Plan | Test Team | Esteban Castillo |
+| 2 | Unit Test Cases | Test Team | Test Lead |
+| 3 | Recurrent Integration Tests | Test Team | Esteban Castillo |
+| 4 | Recurrent E2E Test | Test Team | Esteban Castillo |
+| 5 | Example of successful tests | Test Team | Esteban Castillo |
+| 6 | Test report | Test Lead | Project Manager |
 
-## 2.9 Milestone List
+## 2.8 Milestone List
 
 |  | Test Type | Test Example (SUT) | Dependency (DOC) |
 | --- | --- | --- | --- |
@@ -388,31 +421,77 @@ Front End only
 | 5 | Integration testing | Natural language test | ChatGPT integration with backend, database created, search functionality done, database populated. |
 | 6 | End to end testing | UI test from production environment. | Users will test the applications functionalities from a production environment. |
 
-## 2.10 Test Effort Estimate
+## 2.9 Test Effort Estimate
 
-| Main functionality |  |
-| --- | --- |
-| Log in & sign up |  |
-| Landing page |  |
-| Search |  |
-| Natural language |  |
-| Buy a car |  |
-| Chats |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Num. | Main functionality | Minutes |
+| --- | --- | --- |
+| 1 | Authentication. Fulfill requirements: REQ_FUN_[002], REQ_FUN_[032], REQ_FUN_[033], REQ_FUN_[046], REQ_FUN_[047], REQ_FUN_[048] 
+ | 220 |
+| 2 | Role management | 150 |
+| 3 | Search | 310 |
+| 4 | Consumer Dashboard | 100 |
+| 5 | Admin Dashboard | 100 |
+| 6 | Car management | 130 |
+| 7 | Payments and purchases | 200 |
+| 8 | Metrics and data visualization | 200 |
+|  | Total | 1410 |
+|  | Other testing activities |  |
+| 9 | Test plan creation | 2,400 |
+| 10 | Formal Review | 210 |
+| 11 | Inspection | 220 |
+|  | Total | 2,830 |
+|  | Global total | 4,240 |
 
 # 3. Execution strategy
 
 ## 3.1 Entry and Exit Criteria
 
+1. The entry criteria are the desirable conditions that should be met before starting test execution. At the end of each cycle, only the code migration and fixes need to be assessed.
+2. The exit criteria are the desirable conditions that should be met in order to proceed with implementation.
+3. Entry and exit criteria are flexible benchmarks, subject to assessment by the test team if they are not met. The team will then identify mitigation actions and provide a recommendation. All of this information will be input to the project manager for a final "go-no go" decision.
+4. To start the execution phase of testing, all activities listed in the Test Planning section of the schedule must be 100% completed.
+5. To start each cycle, all activities listed in the Test Execution section of the schedule must be 100% completed.
+
+| Exit Criteria | Test Team | Technical
+Team | Notes |
+| --- | --- | --- | --- |
+| 100% Test Scripts executed |  |  |  |
+| 95% pass rate of Test Scripts |  |  |  |
+| No open Critical and High severity defects |  |  |  |
+| 95% of Medium severity defects have been closed |  |  |  |
+| All remaining defects are either canceled or
+documented as Change Requests for a future release |  |  |  |
+| All expected and actual results are captured and
+documented with the test script |  |  |  |
+
 # 4. Test Management Process
 
 ## 4.1 Test Execution Process
 
+Once the test environment is setup and the testers and CI service is ready the process to ensure the application is stable the following process would be required:
+
+1. The test lead will be in charge of selecting the appropriate informal test
+2. Testers will be assigned an informal test by the test lead
+3. Testers will prepare the testing environment, there would be a document where we’ll track the status of the tests
+4. If any error surfaces during the informal testing process it shall be reported to the test lead, so it can be handled for fixes
+5. Upon pull request Units Tests should be run (pipeline) , to ensure changes to the codebase do not result in breaking existing features.
+6. If pipeline fails the users should fix the tests, in order to merge it’s pull request
+7. E2E and integration tests will be run automatically every 3h to ensure there are no unexpected errors
+8. If E2E tests fails, it should be escalated to the tests lead to address a fix as soon as possible. 
+9. All bug, failure reports should be added by the test lead to a document, so that developers can get context for the existing bug
+10. During the cycle if there are any failed tests, fixes will be handled by the developer team
+
 ## 4.2 Test Risks and Mitigation Factors
+
+| Risk | Probability | Impact | Mitigation Plan |
+| --- | --- | --- | --- |
+| Third party service being tested goes down | Low | Medium | Write unit tests that test the functionality without relying on the third party |
+| Low black test coverage | Low | High | Add checks in the repo that do not allow PRs to be merged if they have low test coverage |
+| Skipping review process for tests | Low | Medium | Ensure the project manager enforces these reviews. |
+| Not running white box testing appropriately | Medium | Medium | Enforce peer reviews for tests and test results. |
+| Testing CI pipeline crashes due to volume of commits or other external factors. | Low | Medium | Run tests by hand |
+| Bias induced in tests | Low | Medium | Write tests before code, write tests with other developers, do test reviews. |
+| Tests taking too long to run | High | Medium | Run some tests ( Integration and E2E) as a cron job so it doesn't block developer workflow. |
 
 ## 4.3 Communications Plan and Team Roster
 
@@ -431,18 +510,51 @@ Front End only
 
 ### 4.3.2 Project Management
 
-### 4.3.3 Test Planning (Test Lead)
+The project manager should review the test plan, strategy and estimates and sign off on it. The project manager should also be responsible for enforcing reviews and the testing strategy. Additionally, the project manager should be involved in formal reviews.
 
-### 4.3.4 Test Team
+### 4.3.3 Activities Schedule
 
-### 4.3.5 Test Lead
+![Untitled](/wiki/Test%20Plan/Untitled.png)
 
-### 4.3.6 Development Team
-
-### 4.3.7 Activities Schedule
+[Activities Schedule](https://docs.google.com/spreadsheets/d/1Ufw-DndqkXT1jG2fCXSPx_80Q-OTM8Ir/edit?usp=sharing&ouid=105313523088712462882&rtpof=true&sd=true)
 
 # 5. Test Environment
 
+Unit Tests:
+
+- Upon PR creation an automatic pipeline will be in charge of running the application in a dockerized environment where we can run NodeJS 18 in a linux system, all dependencies for the project must be installed, and mock servers for stripe, redis, postgressql, elasticsearch.
+
+E2E:
+
+- We will require a dockerized environment using linux, cypress, NodeJS 18 and project dependencies.
+
+Integration Tests:
+
+- We will require a dockerized environment using linux, NodeJS 18, project dependencies.
+
 # 6. Tests
 
+This section will be completed in the following sprints.
+
+**Integration Template:**
+
+6**.1 Integration test case I1**
+
+| Test Case Identifier | I1T1 |
+| --- | --- |
+| Test Item(s) | Login Functionality |
+| Input Specification | I1. Enter valid username and password. I2. Enter invalid credentials. I3. Leave field blanks. |
+| Output Specification | O1. User will log in successfully and enter main dashboard. O2. Error message will appear indicating that the information is wrong, without specifying which was incorrect. O3. The field blanks will mark a message requiring the missing information. |
+| Environmental Needs | 1.1 A functional web browser. 1.2 A valid account to test functionality. 1.3 Internet connection. |
+
 # 7. Conclusion
+
+Testing is an important part of any commercial project, and this test plan will greatly help deliver a quality product that’s able to compete in an international market. The tests detailed in this document will be implemented continuously through the development of this project, while adhering to our test plan and other strategies such as reviews. This will greatly minimize risks during project development, ensure we maintain and deliver a quality codebase and guarantee we deliver a best in class experience to our users, without bugs and adhering to our project plan and requirements.
+
+The process of testing is an integral component of any commercial project, as it ensures that the final product is of high quality and able to successfully compete in the international market. To this end, the development team has prepared a comprehensive test plan that will serve as a guide throughout the project's lifecycle.
+
+It is essential to note that the testing procedures detailed in this document will be implemented consistently and continuously during the development of the project. The team will adhere strictly to the guidelines outlined in the test plan and other complementary strategies, such as reviews, to minimize any risks that may arise during project development. This approach will ensure that the codebase is of high quality and that the final product delivers a best-in-class experience to users, devoid of bugs and in full adherence to the project's plan and requirements.
+
+By following the test plan meticulously, the development team can confidently assure stakeholders that the final product will be of the highest quality, meeting all of their requirements and expectations. The continuous testing process, in tandem with our adherence to the test plan and other complementary strategies, will facilitate a seamless development process, ensuring that the final product is delivered on time and with the highest level of quality.
+
+In summary, the development team recognizes the importance of testing in the overall success of the project, and is committed to implementing the test plan comprehensively to deliver a product that is of the highest quality and meets all project requirements.

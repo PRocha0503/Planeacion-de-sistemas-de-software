@@ -1,7 +1,7 @@
 # Functional requirements
 
 Created: February 20, 2023 6:24 PM
-Last edited time: March 6, 2023 6:39 PM
+Last edited time: March 13, 2023 8:18 PM
 Tags: document
 
 # **Sistemas:**
@@ -28,73 +28,83 @@ Tags: document
 
 | ID. Functional REQ | Concept | Description/ Criteria of acceptance |
 | --- | --- | --- |
-| REQ_FUN_[008] | Online Payments | The clients are able to make their payments online to the agency, using existing payment services: Stripe |
-| REQ_FUN_[009] | Commission Management | The Super Admin will determine commission fees for salesman |
-| REQ_FUN_[010] | Payment types | The client is able to select from a variety of payment types: Down payment, Financing, Upfront payment |
-| REQ_FUN_[011] | Payment methods | The user is able to select the following payment methods Credit, Debit, Wire Transfer, Oxxo |
+| REQ_FUN_[009] | Online Payments | The clients are able to make their payments online to the agency, using existing payment services: Stripe |
+| REQ_FUN_[010] | Commission Management | The Super Admin will determine commission fees for salesman |
+| REQ_FUN_[011] | Payment types | The client is able to select from a variety of payment types: Down payment, Financing, Upfront payment |
+| REQ_FUN_[012] | Payment methods | The user is able to select the following payment methods Credit, Debit, Wire Transfer, Oxxo |
 
 ## Data visualization
 
 | ID. Functional REQ | Concept | Description/ Criteria of acceptance |
 | --- | --- | --- |
-| REQ_FUN_[012] | Data visualization for admins | The data generated will be visualized in plots and downloadable csvs. |
-| REQ_FUN_[013] | Data visualization for super admin | The data generated will be visualized in plots and downloadable csvs. |
-| REQ_FUN_[014] | Data visualization for salesman | The data generated will be visualized in plots and downloadable csvs. |
-| REQ_FUN_[015] | Data visualization for manager | The data generated will be visualized in plots and downloadable csvs. |
+| REQ_FUN_[013] | Data visualization for admins | The data generated will be visualized in plots and downloadable csvs. |
+| REQ_FUN_[014] | Data visualization for super admin | The data generated will be visualized in plots and downloadable csvs. |
+| REQ_FUN_[015] | Data visualization for salesman | The data generated will be visualized in plots and downloadable csvs. |
+| REQ_FUN_[016] | Data visualization for manager | The data generated will be visualized in plots and downloadable csvs. |
 
 ## **Admin Dashboard**
 
 | ID. Functional REQ | Concept | Description/ Criteria of acceptance |
 | --- | --- | --- |
-| REQ_FUN_[016] | Post and manage cars | Car dealership can perform CRUD operations on cars through admin dashboard |
-| REQ_FUN_[017] | Define required documents to buy cars | Car dealership can indicate which documents are needed through the admin dashboard |
-| REQ_FUN_[018] | Update users identity validation status | The car dealership can update a specific user’s validation status through the dashboard |
-| REQ_FUN_[019] | Manage car catalogue | Upload the complete catalogue of the agency |
-| REQ_FUN_[020] | Manage car dealerships | Add, remove, approve or deny car dealerships |
-| REQ_FUN_[021] | Manage driving tests | The salesman is able to manage driving tests for users. |
-| REQ_FUN_[022] | Define payment plans | The manager of a car agency can define the payment plans that they offer. |
-| REQ_FUN_[023] | Define account numbers | The manager can define the bank accounts where the agency receives the payments |
-| REQ_FUN_[024] | Car group owner view dealerships performance | The dashboard of the car group owner will show an overview of the dealership as well as individual performance |
-| REQ_FUN_[025] | Dealership admin view | The dashboard of the dealership manager  will show an overview of the salesmen as well as individual performance |
-| REQ_FUN_[026] | Salesman view | A salesman can view his performance as well as ongoing deals and status |
+| REQ_FUN_[017] | Post and manage cars | Car dealership can perform CRUD operations on cars through admin dashboard |
+| REQ_FUN_[018] | Define required documents to buy cars | Car dealership can indicate which documents are needed through the admin dashboard |
+| REQ_FUN_[019] | Update users identity validation status | The car dealership can update a specific user’s validation status through the dashboard |
+| REQ_FUN_[020] | Manage car catalogue | Upload the complete catalogue of the agency |
+| REQ_FUN_[021] | Manage car dealerships | Add, remove, approve or deny car dealerships |
+| REQ_FUN_[022] | Manage driving tests | The salesman is able to manage driving tests for users. |
+| REQ_FUN_[023] | Define payment plans | The manager of a car agency can define the payment plans that they offer. |
+| REQ_FUN_[024] | Define account numbers | The manager can define the bank accounts where the agency receives the payments |
+| REQ_FUN_[025] | Car group owner view dealerships performance | The dashboard of the car group owner will show an overview of the dealership as well as individual performance |
+
+## Manager/Vendor **Dashboard**
+
+| REQ_FUN_[026] | Dealership admin view | The dashboard of the dealership manager  will show an overview of the salesmen as well as individual performance |
+| --- | --- | --- |
+| REQ_FUN_[027] | Salesman view | A salesman can view his performance as well as ongoing deals and status |
+| REQ_FUN_[028] | Client Support Chat | A salesman (vendor) will have a chat dashboard in order to communicate with the clients via chat. |
+| REQ_FUN_[029] | Test Drive Assigment/Approval | Vendors will be able to view the various test drives for the clients, as well as approve and schedule the test dates. |
 
 ## **User Dashboard**
 
 | ID. Functional REQ | Concept | Description/ Criteria of acceptance |
 | --- | --- | --- |
-| REQ_FUN_[027] | Car visualization | The user is able to see a preview of the car they are interested in |
-| REQ_FUN_[028] | Car configurations | Before buying a car a user can select customization options |
-| REQ_FUN_[030] | Car reviews | The users that buy certain car, can leave a review for it |
-| REQ_FUN_[031] | Car comparison | The user is able to compare stats of different cars |
-| REQ_FUN_[032] | Car driving test | The user is able to schedule a driving test, that gets delivered to their location by the agency. |
+| REQ_FUN_[030] | Car visualization | The user is able to see a preview of the car they are interested in |
+| REQ_FUN_[031] | Car configurations | Before buying a car a user can select customization options |
+| REQ_FUN_[032] | Car reviews | The users that buy certain car, can leave a review for it |
+| REQ_FUN_[033] | Car comparison | The user is able to compare stats of different cars |
+| REQ_FUN_[034] | Car driving test | The user is able to schedule a driving test, that gets delivered to their location by the agency. |
+| REQ_FUN_[035] | Purchase Status | The user will be able to visualize the purchase status of their current cars and  |
+| REQ_FUN_[036] | Favorite Cars | The user dashboard will have a section for all the favorite cars for a quicker access. |
+| REQ_FUN_[037] | Support Chat | The user will be capable of chatting with the vendor for specific doubts. |
+| REQ_FUN_[038] | Apply Test Drive Assigment | The user dashboard will have a section in which the user will be able to schedule a Test Drive and view its process. |
 
 ## Account management
 
 | ID. Functional REQ | Concept | Description/ Criteria of acceptance |
 | --- | --- | --- |
-| REQ_FUN_[032] | User Sign up | User will be able able to create an account in the app |
-| REQ_FUN_[033] | User Log in | The user will be able to use their credentials to log in to the app |
-| REQ_FUN_[034] | NDS agent can add automobile group | The super admin can approve or deny a automobile group |
-| REQ_FUN_[035] | NDS agent can remove automobile group | The super admin can remove a automobile group |
-| REQ_FUN_[036] | NDS agent can update automobile group | The super admin can update a automobile group |
-| REQ_FUN_[037] | NDS agent
+| REQ_FUN_[039] | User Sign up | User will be able able to create an account in the app |
+| REQ_FUN_[040] | User Log in | The user will be able to use their credentials to log in to the app |
+| REQ_FUN_[041] | Super Admin can add automobile group | The super admin can approve or deny a automobile group |
+| REQ_FUN_[042] | Super Admin can remove automobile group | The super admin can remove a automobile group |
+| REQ_FUN_[043] | Super Admin can update automobile group | The super admin can update a automobile group |
+| REQ_FUN_[044] | Super admin visualization permision
  | Super admins can view: Dashboard to manage automobile groups |
-| REQ_FUN_[038] | Car group owner can manage dealerships | Only car group owner can preform the following actions: Add dealerships, Remove Dealerships, Modify dealerships |
-| REQ_FUN_[039] | Car group owner can manage dealership management | Only car group owner can preform the following actions: Add a manager, Remove a manager, Modify a manager |
-| REQ_FUN_[040] | Dealership manager can modify salesmen | Only dealership manager can preform the following actions: Add a salesman, Remove a salesman, Modify a salesman |
-| REQ_FUN_[041] | Salesman or manager modify cars | Only a salesman or manager can preform: Add a car, Remove a car, Modify a car |
-| REQ_FUN_[042] | Salesman approve user documents | A salesman can approve or deny user documents |
-| REQ_FUN_[043] | Salesman approve user driving test | A salesman can approve or deny a user driving test |
-| REQ_FUN_[044] | Regular user can see cars | A regular user can see cars |
-| REQ_FUN_[045] | A regular user can do all the buying car process | A regular user can do all the process of buying cars |
-| REQ_FUN_[046] | Automobile group authentication | A super admin can validate the documents of an automobile group |
-| REQ_FUN_[047] | MFA Authentication setup | Users can set up MFA methods in their profile |
-| REQ_FUN_[048] | MFA Authentication login | Users can login with MFA  |
-| REQ_FUN_[049] | Validate buyers identity | Dealerships can validate buyers documents |
+| REQ_FUN_[045] | Car group owner can manage dealerships | Only car group owner can preform the following actions: Add dealerships, Remove Dealerships, Modify dealerships |
+| REQ_FUN_[046] | Car group owner can manage dealership management | Only car group owner can preform the following actions: Add a manager, Remove a manager, Modify a manager |
+| REQ_FUN_[047] | Dealership manager can modify salesmen | Only dealership manager can preform the following actions: Add a salesman, Remove a salesman, Modify a salesman |
+| REQ_FUN_[048] | Salesman or manager modify cars | Only a salesman or manager can preform: Add a car, Remove a car, Modify a car |
+| REQ_FUN_[049] | Salesman approve user documents | A salesman can approve or deny user documents |
+| REQ_FUN_[050] | Salesman approve user driving test | A salesman can approve or deny a user driving test |
+| REQ_FUN_[051] | Regular user can see cars | A regular user can see cars |
+| REQ_FUN_[052] | A regular user can do all the buying car process | A regular user can do all the process of buying cars |
+| REQ_FUN_[053] | Automobile group authentication | A super admin can validate the documents of an automobile group |
+| REQ_FUN_[054] | MFA Authentication setup | Users can set up MFA methods in their profile |
+| REQ_FUN_[055] | MFA Authentication login | Users can login with MFA  |
+| REQ_FUN_[056] | Validate buyers identity | Dealerships can validate buyers documents |
 
 ## **Devops**
 
 | ID. Functional REQ | Concept | Description/ Criteria of acceptance |
 | --- | --- | --- |
-| REQ_FUN_[050] | CI Pipeline | A CI pipeline must be implemented to automatically test and deploy the latest code to production |
-| REQ_FUN_[051] | User tracking | User flow within the app must be tracked and retained for a minimum period of 5 years |
+| REQ_FUN_[057] | CI Pipeline | A CI pipeline must be implemented to automatically test and deploy the latest code to production |
+| REQ_FUN_[058] | User tracking | User flow within the app must be tracked and retained for a minimum period of 5 years |
