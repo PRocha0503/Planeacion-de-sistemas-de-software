@@ -135,7 +135,7 @@ In summary:
 
 ### 2.2.1 Dynamic tests:
 
-\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***Informal tests\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***
+**Informal tests**
 
 | Purpose                                                                                                                    | SCOPE                                                     | TESTERS                      | METHOD                                                                | TIMING      |
 | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------- | ----------- |
@@ -337,7 +337,7 @@ The web functionality that will be tested includes:
 
 ### 2.6.1 Unit testing
 
-\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***Authentication\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***
+**Authentication**
 
 Front:
 
@@ -365,7 +365,7 @@ Back:
   - If a refresh token is revoked the request is aborted.
 - Users can invalidate their refresh tokens (in case of a sign out/password change).
 
-**\*\***\*\***\*\***\*\***\*\***\*\***\*\***Role and User Management**\*\***\*\***\*\***\*\***\*\***\*\***\*\***
+**Role and User Management**
 
 Front and Back (tested in isolation):
 
@@ -381,14 +381,14 @@ Front End only
 - In case of a success response to any request a success message is displayed and the interface accordingly.
 - In case of an error response to any request an error message is displayed.
 
-\***\*\*\*\*\***Search Functionality\***\*\*\*\*\***
+**Search Functionality**
 
 - Users can see and apply filters from the UI.
 - If no results are found, the user is presented with a helpful error message / related searches.
 
 ### 2.6.2 Integration testing
 
-\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***Authentication\***\*\*\*\*\*\*\***\*\*\*\*\***\*\*\*\*\*\*\***
+**Authentication**
 
 - The frontend can reach the backend and obtain a token.
 - If invalid credentials are provided, the backend returns an error.
@@ -426,18 +426,18 @@ Front End only
 
 ### 2.6.3 End to end testing (validation test)
 
-\***\*\*\*\*\*\*\***Admin Dashboard:\***\*\*\*\*\*\*\***
+**Admin Dashboard:**
 
 - Admins are able to change the role of a user.
 - The change is reflected immediately for the user.
 
-**\*\*\*\***Chat**\*\*\*\***
+**Chat**
 
 - Users can start a chat session and send messages.
 - Salesmen are able to see the messages and reply.
 - The reply is seen immediately on the user side.
 
-**\*\***\*\*\*\***\*\***Payments**\*\***\*\*\*\***\*\***
+**Payments**
 
 - Admins are able to register a bank account through Stripe.
 - Admins are able to visualize their payments through the Stripe portal.
@@ -461,14 +461,14 @@ Front End only
 
 ## 2.8 Milestone List
 
-|     | Test Type           | Test Example (SUT)                   | Dependency (DOC)                                                                                   |
-| --- | ------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------- | ---------------- |
-| 1   | Unit testing        | Login functionality test.            | Login front end page, login endpoint, database created.                                            |
-| 2   | Unit testing        | Buy a car functionality              | Buy a car endpoint, database, interface, stripe integration.                                       |
-| 3   | Unit testing        | Search test                          | Elastic setup for search, database, filters                                                        | natural language |
-| 4   | Integration testing | Backend connection to stripe         | Database created, buy a car endpoint                                                               |
-| 5   | Integration testing | Natural language test                | ChatGPT integration with backend, database created, search functionality done, database populated. |
-| 6   | End to end testing  | UI test from production environment. | Users will test the applications functionalities from a production environment.                    |
+|   |      Test Type      |          Test Example (SUT)          |                                          Dependency (DOC)                                          |
+|:-:|:-------------------:|:------------------------------------:|:--------------------------------------------------------------------------------------------------:|
+| 1 | Unit testing        | Login functionality test.            | Login front end page, login endpoint, database created.                                            |
+| 2 | Unit testing        | Buy a car functionality              | Buy a car endpoint, database, interface, stripe integration.                                       |
+| 3 | Unit testing        | Search test                          | Elastic setup for search, database, filters                                                        |
+| 4 | Integration testing | Backend connection to stripe         | Database created, buy a car endpoint                                                               |
+| 5 | Integration testing | Natural language test                | ChatGPT integration with backend, database created, search functionality done, database populated. |
+| 6 | End to end testing  | UI test from production environment. | Users will test the applications functionalities from a production environment.                    |
 
 ## 2.9 Test Effort Estimate
 
@@ -501,8 +501,7 @@ Front End only
 4. To start the execution phase of testing, all activities listed in the Test Planning section of the schedule must be 100% completed.
 5. To start each cycle, all activities listed in the Test Execution section of the schedule must be 100% completed.
 
-| Exit Criteria | Test Team | Technical
-Team | Notes |
+| Exit Criteria | Test Team | Technical Team | Notes |
 | --- | --- | --- | --- |
 | 100% Test Scripts executed | | | |
 | 95% pass rate of Test Scripts | | | |
