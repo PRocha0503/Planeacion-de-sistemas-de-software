@@ -1,12 +1,14 @@
 # Database Design
 
 Created: March 1, 2023 7:25 PM
-Last edited time: March 8, 2023 8:15 PM
+Last edited time: March 14, 2023 5:48 PM
 Tags: document
 
 [nds | DrawSQL](https://drawsql.app/teams/tec-de-monterrey-3/diagrams/nds)
 
 ## Data Model
+
+[https://www.notion.so](https://www.notion.so)
 
 | users |
 | --- |
