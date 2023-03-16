@@ -447,17 +447,14 @@ Front End only
 
 ## 2.7 Test Deliverables
 
-| No.    | Name                        | Author    | Reviewer         |
-| ------ | --------------------------- | --------- | ---------------- |
-| 1      | Test Plan                   | Test Team | Esteban Castillo |
-| 2      | Unit Test Cases             | Test Team | Test Lead        |
-| 3      | Recurrent Integration Tests | Test Team | Esteban Castillo |
-| Felipe |
-| 4      | Recurrent E2E Test          | Test Team | Esteban Castillo |
-| Felipe |
-| 5      | Example of successful tests | Test Team | Esteban Castillo |
-| Felipe |
-| 6      | Test report                 | Test Lead | Project Manager  |
+| No. |              Name              |   Author  |         Reviewer         |
+|:---:|:------------------------------:|:---------:|:------------------------:|
+| 1   | Test Plan                      | Test Team | Esteban Castillo         |
+| 2   | Unit Test Cases                | Test Team | Test Lead                |
+| 3   | Recurrent Integration Tests    | Test Team | Esteban Castillo, Felipe |
+| 4   | Recurrent E2E Test             | Test Team | Esteban Castillo, Felipe |
+| 5   | Example of successful tests    | Test Team | Esteban Castillo, Felipe |
+| 6   | Test report                    | Test Lead | Project Manager          |
 
 ## 2.8 Milestone List
 
@@ -472,10 +469,9 @@ Front End only
 
 ## 2.9 Test Effort Estimate
 
-| Num. | Main functionality                                                                                                             | Black box minutes | Black box minutes (ideally not performed) |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------- | ----------------------------------------- |
-| 1    | Authentication. Fulfill requirements: REQ*FUN*[002], REQ*FUN*[032], REQ*FUN*[033], REQ*FUN*[046], REQ*FUN*[047], REQ*FUN*[048] |
-| 220  | 440                                                                                                                            |
+| Num. |                                                       Main functionality                                                       | Black box minutes | White box minutes (ideally not performed) |
+|:----:|:------------------------------------------------------------------------------------------------------------------------------:|:-----------------:|:-----------------------------------------:|
+| 1    | Authentication. Fulfill requirements: REQ_FUN_[002], REQ_FUN_[032], REQ_FUN_[033], REQ_FUN_[046], REQ_FUN_[047], REQ_FUN_[048] | 220               | 440                                       |
 | 2    | Role management                                                                                                                | 150               | 300                                       |
 | 3    | Search                                                                                                                         | 310               | 620                                       |
 | 4    | Consumer Dashboard                                                                                                             | 100               | 200                                       |
